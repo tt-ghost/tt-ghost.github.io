@@ -18,11 +18,11 @@ setStatus()
 fullscreen.listen(function(){
   setStatus()
   var time = new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString() + ': '
-  var html = (fullscreen.is() ? `${time}<b>full screen</b><br>` : `${time}<b>exit full screen</b><br>`)
-  html += `document.body.scrollHeight: ${document.body.scrollHeight}<br>
-  window.screen.height: ${window.screen.height}<br>
-  document.body.scrollWidth: ${document.body.scrollWidth}<br>
-  window.screen.width: ${window.screen.width}<br><br>
+  var html = (fullscreen.is() ? `${time}<b>full screen</b><br/>` : `${time}<b>exit full screen</b><br/>`)
+  html += `document.body.scrollHeight: ${document.body.scrollHeight}<br/>
+  window.screen.height: ${window.screen.height}<br/>
+  document.body.scrollWidth: ${document.body.scrollWidth}<br/>
+  window.screen.width: ${window.screen.width}<br/><br/>
   ` + logContainer.innerHTML
   logContainer.innerHTML = html
 })
