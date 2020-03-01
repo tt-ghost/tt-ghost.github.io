@@ -1,5 +1,3 @@
-// var lipper = require('../src/main')
-
 lipper.init({
   duration: 1.5,
   selector: ['button', '.container'],

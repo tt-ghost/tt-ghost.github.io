@@ -1,10 +1,8 @@
----
-layout: false
----
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>lipper examples</title>
   <style>
     body{
@@ -15,25 +13,31 @@ layout: false
       font-size: 14px;
       color:#333;
     }
-    div{
+    .container{
       min-height: 100px;
-      background: #2492cc;
+      background: #18775d;
     }
     h2{
       margin:0;
       padding: 10px 20px;
       color:#18775d;
     }
+    .btn-group{
+      text-align: center;
+      padding: 20px;
+    }
     button{
-      height: 40px;
-      background-color:#18775d;
+      height: 60px;
+      background-color:#1b312b;
       border: none;
       transition: .3s ease all;
       border-radius: 3px;
-      margin: 30px;
+      display: block;
       color:#fff;
       font-size: 16px;
       padding: 10px 20px;
+      margin-left: auto;
+      margin-right: auto;
     }
     button:active, button:focus{
       border: none;
@@ -45,7 +49,7 @@ layout: false
     .content{
       padding: 20px;
       color:#fff;
-      background-color:#18775d;
+      /* background-color:#18775d; */
     }
     a{
       color:#fff;
@@ -54,26 +58,40 @@ layout: false
       position: relative;
       overflow: hidden;
     }
+    .c-code{
+      overflow: auto;
+    }
+    .c-code .c-comments{
+      font-style: italic;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
-  <h2>lipper 轻量的涟漪效果库</h2>
+  <h2>Light weight ripple library</h2>
   <div class='container'>
-    <button class='btn'><span>点击产生涟漪</span></button>
-    <button class='btn'><span>点击产生涟漪2</span></button>
-    <button class='btn'><span>点击产生涟漪3</span></button>
+    <div class="btn-group">
+      <button class='btn'><span>Click to create lipper</span></button>
+    </div>
     <div class='content'>
-      <h3>用法：</h3>
-      <p>指定选择器，支持<code>querySelector</code> 选择器<a target="_blank" href='https://www.npmjs.com/package/lipper'>详情见文档</a></p>
-<pre>
+      <h3>Usage:</h3>
+      <p><code>Selector</code> support <code>querySelector</code>. <a target="_blank" href='https://www.npmjs.com/package/lipper'>detailed documentation.</a></p>
+<pre class='c-code'>
 lipper.init({
-  duration: 1.5, // 涟漪持续时间，单位秒
-  selector: ['button', '.container'], // 选择器，字符串或字符串数组
-  radius: 50, // 扩散半径
+  <code class='c-comments'>// Duration. The unit is second. Default value: 1.5</code>
+  duration: 1.5,
+  <code class='c-comments'>// CSS selector. String or string array. No default value. Required</code>
+  selector: ['button', '.container'],
+  <code class='c-comments'>// Diffusion radius. The unit is px. Default value: 50</code>
+  radius: 50,
+  <code class='c-comments'>// z-index value. Default value: 1000</code>
   zindex: 1000,
-  center: true, // 是否在容器中央涟漪
-  overflow: false, // 是否在容器外继续涟漪
-  color: 'rgba(255, 0, 0, .5)' // 涟漪的背景色
+  <code class='c-comments'>// Whether lipper in the container. Default value: false</code>
+  center: true,
+  <code class='c-comments'>// Whether to continue lipper outside the container.</code>
+  overflow: false,
+  <code class='c-comments'>// The color of lipper. Default value: rgba(255, 0, 0, .5)</code>
+  color: 'rgba(255, 0, 0, .5)'
 })
 </pre>
     </div>
