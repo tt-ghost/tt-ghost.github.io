@@ -230,7 +230,7 @@
                   "widget": "text",
                   "hidden": false,
                   "option": {
-                    "content": "应缴税款：{{\n$f.awards *0.01 * (\n\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 38 : (\n45\n)\n) \n) \n) \n) \n)\n\n) - (\n\n$f.awards/12 <= 3000 ? 0 : (\n$f.awards/12 <= 12000 ? 210 : (\n$f.awards/12 <= 25000 ? 1410 : (\n$f.awards/12 <= 35000 ? 2660 : (\n$f.awards/12 <= 55000 ? 4410 : (\n$f.awards/12 <= 80000 ? 7160 : (\n15160\n)\n) \n) \n) \n) \n)\n\n)\n\n}} 元"
+                    "content": "应缴税款：{{\n$f.awards *0.01 * (\n\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 35 : (\n45\n)\n) \n) \n) \n) \n)\n\n) - (\n\n$f.awards/12 <= 3000 ? 0 : (\n$f.awards/12 <= 12000 ? 210 : (\n$f.awards/12 <= 25000 ? 1410 : (\n$f.awards/12 <= 35000 ? 2660 : (\n$f.awards/12 <= 55000 ? 4410 : (\n$f.awards/12 <= 80000 ? 7160 : (\n15160\n)\n) \n) \n) \n) \n)\n\n)\n\n}} 元"
                   },
                   "style": {
                     "text-align": "left",
@@ -260,7 +260,7 @@
                   "widget": "text",
                   "hidden": false,
                   "option": {
-                    "content": "实发工资：{{\n$f.awards - $f.awards *0.01 * (\n\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 38 : (\n45\n)\n) \n) \n) \n) \n)\n\n) - (\n\n$f.awards/12 <= 3000 ? 0 : (\n$f.awards/12 <= 12000 ? 210 : (\n$f.awards/12 <= 25000 ? 1410 : (\n$f.awards/12 <= 35000 ? 2660 : (\n$f.awards/12 <= 55000 ? 4410 : (\n$f.awards/12 <= 80000 ? 7160 : (\n15160\n)\n) \n) \n) \n) \n)\n\n)\n\n}} 元"
+                    "content": "实发工资：{{\n$f.awards - ($f.awards *0.01 * (\n\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 35 : (\n45\n)\n) \n) \n) \n) \n)\n\n) - (\n\n$f.awards/12 <= 3000 ? 0 : (\n$f.awards/12 <= 12000 ? 210 : (\n$f.awards/12 <= 25000 ? 1410 : (\n$f.awards/12 <= 35000 ? 2660 : (\n$f.awards/12 <= 55000 ? 4410 : (\n$f.awards/12 <= 80000 ? 7160 : (\n15160\n)\n) \n) \n) \n) \n)\n\n)\n)\n}} 元"
                   },
                   "style": {
                     "text-align": "left",
@@ -272,7 +272,7 @@
                   "widget": "text",
                   "hidden": false,
                   "option": {
-                    "content": "适用税率：{{\nwindow._epage_c_rate =\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 38 : (\n45\n)\n) \n) \n) \n) \n)\n\n}} %"
+                    "content": "适用税率：{{\nwindow._epage_c_rate =\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 35 : (\n45\n)\n) \n) \n) \n) \n)\n\n}} %"
                   },
                   "style": {
                     "text-align": "left",
