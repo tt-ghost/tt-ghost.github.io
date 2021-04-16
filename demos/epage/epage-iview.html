@@ -57,9 +57,9 @@ const { default: PCwidgets, entry: PCEntry } = EpageIview
 const { default: H5widgets, entry: H5Entry } = EpageVant
 const el = document.getElementById('root')
 
-const VantWidgets = H5Widgets.map((group, index) => {
+const VantWidgets = H5widgets.map((group, index) => {
   group.widgets.map((widget, key) => {
-    widget.Setting = PCWidgets[index].widgets[key].Setting
+    widget.Setting = PCwidgets[index].widgets[key].Setting
     return widget
   })
   return group
