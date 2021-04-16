@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <link href="//cdn.bootcss.com/iview/2.14.3/styles/iview.css" rel="stylesheet">
+  <link href='//cdn.jsdelivr.net/npm/vant@2.8/lib/index.css' rel='stylesheet'></link> 
   <link href="/demos/epage/lib/epage.css" rel="stylesheet">
   <link href="/demos/epage/lib/epage-iview.css" rel="stylesheet">
   <link href="/demos/epage/lib/epage-vant.css" rel="stylesheet">
@@ -28,7 +29,7 @@
     #root, .ep-editor{
       position: fixed;
       width: 100%;
-      top:40px;
+      top:0;
       left:0;
       right: 0;
       bottom: 0;
@@ -56,6 +57,14 @@ const { default: PCwidgets, entry: PCEntry } = EpageIview
 const { default: H5widgets, entry: H5Entry } = EpageVant
 const el = document.getElementById('root')
 
+const VantWidgets = H5Widgets.map((group, index) => {
+  group.widgets.map((widget, key) => {
+    widget.Setting = PCWidgets[index].widgets[key].Setting
+    return widget
+  })
+  return group
+})
+
 fetch('/demos/epage/source/awards.json')
 .then(res => res.json())
 .then(schema => {
@@ -72,7 +81,7 @@ fetch('/demos/epage/source/awards.json')
     h5: {
       component: H5Entry,
       Render: render.VueRender,
-      widgets: H5widgets
+      widgets: VantWidgets
     }
   })
 })
