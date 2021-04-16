@@ -6,6 +6,7 @@
   <link href="//cdn.bootcss.com/iview/2.14.3/styles/iview.css" rel="stylesheet">
   <link href="/demos/epage/lib/epage.css" rel="stylesheet">
   <link href="/demos/epage/lib/epage-iview.css" rel="stylesheet">
+  <link href="/demos/epage/lib/epage-vant.css" rel="stylesheet">
   <script src='/ga.js'></script>
   <script type="text/javascript" src="//cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
   <script type="text/javascript" src="//cdn.bootcss.com/vuex/3.1.1/vuex.min.js"></script>
@@ -15,6 +16,7 @@
   <script src='/demos/epage/lib/epage-core.min.js'></script>
   <script src='/demos/epage/lib/epage.min.js'></script>
   <script src='/demos/epage/lib/epage-iview.min.js'></script>
+  <script src='/demos/epage/lib/epage-vant.min.js'></script>
   <title>epage-iview demo</title>
   <style>
     body,html{
@@ -41,21 +43,38 @@
   </style>
 </head>
 <body>
+  <!--
   <header class='fe-header'>
     <b class='title'>Epage 设计器(V0.6.0)</b>
     <a href='/demos/epage/awards.html'>查看渲染器</a>
   </header>
+  -->
   <div id='root'></div>
   <script>
-    
-const { default: widgets, Render } = EpageIview
+const { render } = EpageCore    
+const { default: PCwidgets, entry: PCEntry } = EpageIview
+const { default: H5widgets, entry: H5Entry } = EpageVant
 const el = document.getElementById('root')
 
 fetch('/demos/epage/source/awards.json')
 .then(res => res.json())
 .then(schema => {
   console.dir(EpageIview)
-  new Epage({el, widgets, schema, Render })
+  new Epage({
+    el,
+    schema,
+    view: 'pc',
+    pc: {
+      component: PCEntry,
+      Render: render.VueRender,
+      widgets: PCwidgets
+    },
+    h5: {
+      component: H5Entry,
+      Render: render.VueRender,
+      widgets: H5widgets
+    }
+  })
 })
 
   </script>
