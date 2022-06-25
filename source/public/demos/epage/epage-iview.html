@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  
+  <link href="//cdn.bootcss.com/iview/2.14.3/styles/iview.css" rel="stylesheet">
+  <link href='//cdn.jsdelivr.net/npm/vant@2.8/lib/index.css' rel='stylesheet'></link> 
+  
+  <link href="/demos/epage/lib/epage.css" rel="stylesheet">
+  <link href="/demos/epage/lib/epage-iview.css" rel="stylesheet">
+  <link href="/demos/epage/lib/epage-vant.css" rel="stylesheet">
+  
+  <script src='/ga.js'></script>
+  <script type="text/javascript" src="//cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <script type="text/javascript" src="//cdn.bootcss.com/vuex/3.1.1/vuex.min.js"></script>
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/iview/2.14.3/iview.min.js"></script>
+  <script type="text/javascript" src='//cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js' ></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js"></script>
+  
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.20.0/vuedraggable.umd.min.js"></script>
+  
+  <script src='/demos/epage/lib/epage-core.min.js'></script>
+  <script src='/demos/epage/lib/epage.min.js'></script>
+  <script src='/demos/epage/lib/epage-iview.min.js'></script>
+  <script src='/demos/epage/lib/epage-vant.min.js'></script>
+  <title>epage-iview demo</title>
+  <style>
+    body,html{
+      color:#444;
+      padding: 0;
+      margin: 0;
+      background-color: rgba(246,246,246,1);
+    }
+    #root, .ep-editor{
+      position: fixed;
+      width: 100%;
+      top:0;
+      left:0;
+      right: 0;
+      bottom: 0;
+    }
+    .fe-header{
+      height: 39px;
+      line-height: 39px;
+      border-bottom: 0.5px solid #ccc;
+      padding: 0 16px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!--
+  <header class='fe-header'>
+    <b class='title'>Epage 设计器(V0.6.0)</b>
+    <a href='/demos/epage/awards.html'>查看渲染器</a>
+  </header>
+  -->
+  <div id='root'></div>
+  <script>
+const { render } = EpageCore    
+const { default: PCwidgets, entry: PCEntry } = EpageIview
+const { default: H5widgets, entry: H5Entry } = EpageVant
+const el = document.getElementById('root')
+
+const VantWidgets = H5widgets.map((group, index) => {
+  group.widgets.map((widget, key) => {
+    widget.Setting = PCwidgets[index].widgets[key].Setting
+    return widget
+  })
+  return group
+})
+
+fetch('/demos/epage/source/awards.json')
+.then(res => res.json())
+.then(schema => {
+  console.dir(EpageIview)
+  new Epage({
+    el,
+    schema,
+    view: 'pc',
+    pc: {
+      component: PCEntry,
+      Render: render.VueRender,
+      widgets: PCwidgets
+    },
+    h5: {
+      component: H5Entry,
+      Render: render.VueRender,
+      widgets: VantWidgets
+    }
+  })
+})
+
+  </script>
+</body>
+</html>

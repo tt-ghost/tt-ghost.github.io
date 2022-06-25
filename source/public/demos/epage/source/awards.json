@@ -1,0 +1,339 @@
+{
+  "key": "kuEXemrCZ",
+  "widget": "grid",
+  "hidden": false,
+  "option": {
+    "gutter": 0,
+    "align": "top",
+    "justify": "start"
+  },
+  "style": {
+    "margin-right": "auto",
+    "margin-left": "auto",
+    "background": [],
+    "container": {
+      "background-color": "rgba(246,246,246,1)",
+      "background": []
+    },
+    "padding-top": "5%",
+    "padding-bottom": "5%",
+    "width": "90%",
+    "font-weight": "400"
+  },
+  "label": {
+    "width": 60,
+    "position": "right",
+    "colon": false
+  },
+  "container": true,
+  "children": [
+    {
+      "span": 24,
+      "list": [
+        {
+          "key": "kUzGdnVTh",
+          "widget": "text",
+          "hidden": false,
+          "option": {
+            "content": "基本信息测试"
+          },
+          "style": {
+            "text-align": "center",
+            "font-weight": "700"
+          }
+        },
+        {
+          "key": "kGZLjx5Vx",
+          "widget": "input",
+          "hidden": false,
+          "option": {
+            "password": false,
+            "prefix": "",
+            "suffix": ""
+          },
+          "style": {},
+          "name": "email",
+          "type": "string",
+          "label": "邮箱",
+          "description": "",
+          "help": "",
+          "disabled": false,
+          "rules": [
+            {
+              "required": true,
+              "message": "必填",
+              "type": "string",
+              "trigger": "blur"
+            },
+            {
+              "message": "邮箱格式不正确",
+              "type": "email"
+            }
+          ],
+          "placeholder": "请选择...",
+          "default": ""
+        },
+        {
+          "key": "kJEUnatKj",
+          "widget": "cascader",
+          "hidden": false,
+          "option": {
+            "type": "dynamic",
+            "url": "/demos/epage/source/city.json",
+            "adapter": "\nreturn util.convert2kv(data.provinces, function (item){\n  return {\n    key: item.provinceName || item.citysName,\n    value: item.provinceName || item.citysName\n  }\n}, 'citys')\n",
+            "dynamicData": [],
+            "delimiter": "/",
+            "clearable": true,
+            "notFoundText": "无匹配数据",
+            "filterable": false,
+            "data": [
+              {
+                "key": "A",
+                "value": "option A",
+                "children": [
+                  {
+                    "key": "B",
+                    "value": "option B"
+                  }
+                ]
+              }
+            ],
+            "dict": {
+              "dict": "",
+              "dictAPI": "",
+              "api": ""
+            }
+          },
+          "style": {},
+          "name": "city",
+          "type": "array<string>",
+          "label": "城市",
+          "description": "",
+          "help": "",
+          "disabled": false,
+          "rules": [
+            {
+              "required": false,
+              "message": "必填",
+              "type": "array",
+              "trigger": "change"
+            }
+          ],
+          "placeholder": "请选择",
+          "default": []
+        },
+        {
+          "key": "kVA5XnV1U",
+          "widget": "line",
+          "hidden": false,
+          "option": {
+            "direction": "horizontal",
+            "hposition": "middle",
+            "vposition": "center",
+            "length": 100,
+            "thickness": 1,
+            "type": "dashed",
+            "color": "rgba(160,160,160,1)"
+          },
+          "style": {}
+        },
+        {
+          "key": "kvyOivLgj",
+          "widget": "text",
+          "hidden": false,
+          "option": {
+            "content": "年终奖计算器"
+          },
+          "style": {
+            "text-align": "center",
+            "font-weight": "700"
+          }
+        },
+        {
+          "key": "kmeYqoaKN",
+          "widget": "grid",
+          "hidden": false,
+          "option": {
+            "gutter": 0,
+            "align": "middle",
+            "justify": "start"
+          },
+          "style": {
+            "width": "",
+            "margin-left": "auto",
+            "margin-right": "auto"
+          },
+          "label": "布局",
+          "container": true,
+          "children": [
+            {
+              "span": 24,
+              "list": [
+                {
+                  "key": "kgn3Z3Bu3",
+                  "widget": "input",
+                  "hidden": false,
+                  "option": {
+                    "password": false,
+                    "prefix": "年终奖",
+                    "suffix": "元"
+                  },
+                  "style": {
+                    "padding-right": "",
+                    "text-align": "center",
+                    "margin-left": "auto",
+                    "margin-right": "auto"
+                  },
+                  "name": "awards",
+                  "type": "string",
+                  "label": "",
+                  "description": "",
+                  "help": "",
+                  "disabled": false,
+                  "rules": [
+                    {
+                      "required": false,
+                      "message": "必填",
+                      "type": "string",
+                      "trigger": "blur"
+                    }
+                  ],
+                  "placeholder": "请输入年终奖",
+                  "default": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kfBLfQByD",
+          "widget": "grid",
+          "hidden": false,
+          "option": {
+            "gutter": 0,
+            "align": "top",
+            "justify": "start"
+          },
+          "style": {
+            "width": "",
+            "margin-left": "auto",
+            "margin-right": "auto"
+          },
+          "label": "布局",
+          "container": true,
+          "children": [
+            {
+              "span": 12,
+              "list": [
+                {
+                  "key": "knLWP0yJ6",
+                  "widget": "text",
+                  "hidden": false,
+                  "option": {
+                    "content": "应缴税款：{{\n$f.awards *0.01 * (\n\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 35 : (\n45\n)\n) \n) \n) \n) \n)\n\n) - (\n\n$f.awards/12 <= 3000 ? 0 : (\n$f.awards/12 <= 12000 ? 210 : (\n$f.awards/12 <= 25000 ? 1410 : (\n$f.awards/12 <= 35000 ? 2660 : (\n$f.awards/12 <= 55000 ? 4410 : (\n$f.awards/12 <= 80000 ? 7160 : (\n15160\n)\n) \n) \n) \n) \n)\n\n)\n\n}} 元"
+                  },
+                  "style": {
+                    "text-align": "left",
+                    "font-weight": "400"
+                  }
+                },
+                {
+                  "key": "kmwyjUKz5",
+                  "widget": "text",
+                  "hidden": false,
+                  "option": {
+                    "content": "平均每月：{{\n\n$f.awards/12\n\n}} 元"
+                  },
+                  "style": {
+                    "text-align": "left",
+                    "font-weight": "400",
+                    "display": "block"
+                  }
+                }
+              ]
+            },
+            {
+              "span": 12,
+              "list": [
+                {
+                  "key": "k056QYzHf",
+                  "widget": "text",
+                  "hidden": false,
+                  "option": {
+                    "content": "实发工资：{{\n$f.awards - ($f.awards *0.01 * (\n\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 35 : (\n45\n)\n) \n) \n) \n) \n)\n\n) - (\n\n$f.awards/12 <= 3000 ? 0 : (\n$f.awards/12 <= 12000 ? 210 : (\n$f.awards/12 <= 25000 ? 1410 : (\n$f.awards/12 <= 35000 ? 2660 : (\n$f.awards/12 <= 55000 ? 4410 : (\n$f.awards/12 <= 80000 ? 7160 : (\n15160\n)\n) \n) \n) \n) \n)\n\n)\n)\n}} 元"
+                  },
+                  "style": {
+                    "text-align": "left",
+                    "font-weight": "400"
+                  }
+                },
+                {
+                  "key": "k8ApRG3vY",
+                  "widget": "text",
+                  "hidden": false,
+                  "option": {
+                    "content": "适用税率：{{\nwindow._epage_c_rate =\n$f.awards/12 <= 3000 ? 3 : (\n$f.awards/12 <= 12000 ? 10 : (\n$f.awards/12 <= 25000 ? 20 : (\n$f.awards/12 <= 35000 ? 25 : (\n$f.awards/12 <= 55000 ? 30 : (\n$f.awards/12 <= 80000 ? 35 : (\n45\n)\n) \n) \n) \n) \n)\n\n}} %"
+                  },
+                  "style": {
+                    "text-align": "left",
+                    "font-weight": "400"
+                  }
+                }
+              ]
+            },
+            {
+              "span": 12,
+              "list": [
+                {
+                  "key": "kEhv3m3sh",
+                  "widget": "text",
+                  "hidden": false,
+                  "option": {
+                    "content": "数算扣除数：{{\nwindow._epage_c_count =\n$f.awards/12 <= 3000 ? 0 : (\n$f.awards/12 <= 12000 ? 210 : (\n$f.awards/12 <= 25000 ? 1410 : (\n$f.awards/12 <= 35000 ? 2660 : (\n$f.awards/12 <= 55000 ? 4410 : (\n$f.awards/12 <= 80000 ? 7160 : (\n15160\n)\n) \n) \n) \n) \n)\n\n}} 元"
+                  },
+                  "style": {
+                    "text-align": "left",
+                    "font-weight": "400"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "",
+  "description": "",
+  "size": "default",
+  "logics": [
+    {
+      "type": "value",
+      "key": "kJS5p038S",
+      "action": ">",
+      "value": "-1",
+      "relation": "or",
+      "trigger": "script",
+      "script": "console.log(ctx)",
+      "effects": [
+        {
+          "key": "",
+          "properties": [
+            {
+              "key": "hidden",
+              "value": false
+            },
+            {
+              "key": "disabled",
+              "value": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "store": {
+    "dicts": [],
+    "apis": []
+  }
+}

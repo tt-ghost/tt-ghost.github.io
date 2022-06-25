@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>lipper examples</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62287374-3"></script>
+  <script src='/ga.js'></script>
+    
+  <style>
+    body{
+      height: 300px;
+      background: #eee;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      color:#333;
+    }
+    .container{
+      min-height: 100px;
+      background: #18775d;
+    }
+    h2{
+      margin:0;
+      padding: 10px 20px;
+      color:#18775d;
+    }
+    .btn-group{
+      text-align: center;
+      padding: 20px;
+    }
+    button{
+      height: 60px;
+      background-color:#1b312b;
+      border: none;
+      transition: .3s ease all;
+      border-radius: 3px;
+      display: block;
+      color:#fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button:active, button:focus{
+      border: none;
+      outline: none;
+    }
+    button:active{
+      background-color:#115f49;
+    }
+    .content{
+      padding: 20px;
+      color:#fff;
+      /* background-color:#18775d; */
+    }
+    a{
+      color:#fff;
+    }
+    .container{
+      position: relative;
+      overflow: hidden;
+    }
+    .c-code{
+      overflow: auto;
+    }
+    .c-code .c-comments{
+      font-style: italic;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h2>Light weight ripple library</h2>
+  <div class='container'>
+    <div class="btn-group">
+      <button class='btn'><span>Click to create lipper</span></button>
+    </div>
+    <div class='content'>
+      <h3>Usage:</h3>
+      <p><code>Selector</code> support <code>querySelector</code>. <a target="_blank" href='https://www.npmjs.com/package/lipper'>detailed documentation.</a></p>
+<pre class='c-code'>
+lipper.init({
+  <code class='c-comments'>// Duration. The unit is second. Default value: 1.5</code>
+  duration: 1.5,
+  <code class='c-comments'>// CSS selector. String or string array. No default value. Required</code>
+  selector: ['button', '.container'],
+  <code class='c-comments'>// Diffusion radius. The unit is px. Default value: 50</code>
+  radius: 50,
+  <code class='c-comments'>// z-index value. Default value: 1000</code>
+  zindex: 1000,
+  <code class='c-comments'>// Whether lipper in the container. Default value: false</code>
+  center: true,
+  <code class='c-comments'>// Whether to continue lipper outside the container.</code>
+  overflow: false,
+  <code class='c-comments'>// The color of lipper. Default value: rgba(255, 0, 0, .5)</code>
+  color: 'rgba(255, 0, 0, .5)'
+})
+</pre>
+    </div>
+  </div>
+  <script src='./lipper.min.js'></script>
+  <script src='./main.js'></script>
+</body>
+</html>
