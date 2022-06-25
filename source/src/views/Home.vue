@@ -3,10 +3,10 @@
   .fe-home-nav
     FePhotoFrame.fe-home-epage(:src="img" size='small')
       h3
-        a(href='/demos/epage') Epage
+        a(href='/demos/epage/epage-iview') Epage
     FePhotoFrame.fe-home-calc(:src="img" size='small')
       h3
-        a(href='/demos/awards') 计算器
+        a(href='/demos/epage/awards') 计算器
     FePhotoFrame.fe-home-fullscreen(:src="img" size='small')
       h3
         a(href='/demos/fullscreen') Fullscreen.js
