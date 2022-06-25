@@ -5,23 +5,23 @@
       img(src='http://epage.didichuxing.com/assets/img/epage-main-iview.a2bbf507.png')
     .fe-home-block-right
       h3.fe-home-block-title
-        a(href='/demos/epage/epage-iview' title='查看演示') Epage
+        a(href='/demos/epage/epage-iview' title='查看演示' target='_blank') Epage
       .fe-home-block-body
         p 一款基于schema的可视化页面配置工具
-        p 安装 yarn add epage epage-core epage-iview
         p 仓库 
-          a(href="https://github.com/didi/epage") Github
+          a(href="https://github.com/didi/epage" target='_blank') Github
+        p 安装 yarn add epage epage-core epage-iview
 
 .fe-home-block(id='lipper01')
   .fe-home-block-inner
     .fe-home-block-left
       h3.fe-home-block-title
-        a(href='/demos/lipper' title='查看演示') lipper
+        a(href='/demos/lipper' title='查看演示' target='_blank') lipper
       .fe-home-block-body
         p 浏览器鼠标点击涟漪效果库
-        p 安装 yarn add lipper
         p 仓库 
-          a(href="https://github.com/tt-ghost/lipper") Github
+          a(href="https://github.com/tt-ghost/lipper" target='_blank') Github
+        p 安装 yarn add lipper
     .fe-home-block-right
       .fe-home-block-right-lipper(id='lipper02') 涟漪
 
@@ -32,12 +32,12 @@
       .fe-home-block-left-fc-btn(@click='onFullcreenExit') 退出全屏
     .fe-home-block-right
       h3.fe-home-block-title
-        a(href='/demos/fullscreen' title='查看演示') Fullscreen.js
+        a(href='/demos/fullscreen' title='查看演示' target='_blank') Fullscreen.js
       .fe-home-block-body
         p 浏览器全屏操作JS库
-        p 安装 yarn add fullscreen.js
         p 仓库 
-          a(href="https://github.com/tt-ghost/fullscreen.js") Github
+          a(href="https://github.com/tt-ghost/fullscreen.js" target='_blank') Github
+        p 安装 yarn add fullscreen.js
 
 //- .fe-home-nav
 //-   FePhotoFrame.fe-home-epage(:src="img" size='small')
