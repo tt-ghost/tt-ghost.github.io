@@ -20,19 +20,3 @@ const route = useRoute();
 console.log(route.path);
 const matchMemu = (to) => route.path === to;
 </script>
-<style lang="styl">
-.fe-menu
-  display inline-block;
-  font-size 12px;
-  &-item
-    color #666;
-    display inline-block;
-    padding-left 24px;
-    padding-right 24px;
-    text-align center;
-    letter-spacing: 4px;
-    font-weight 400;
-    &:hover,&.active
-      font-weight 700;
-      color #252525;
-</style>

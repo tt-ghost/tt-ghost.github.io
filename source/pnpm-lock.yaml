@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@vitejs/plugin-vue': ^2.3.3
+  lipper: ^0.4.4
   pug: ^3.0.2
   stylus: ^0.58.1
   vite: ^2.9.9
@@ -10,6 +11,7 @@ specifiers:
   vue-router: ^4.0.16
 
 dependencies:
+  lipper: registry.npmmirror.com/lipper/0.4.4
   vue: registry.npmmirror.com/vue/3.2.37
   vue-router: registry.npmmirror.com/vue-router/4.0.16_vue@3.2.37
 
@@ -673,6 +675,12 @@ packages:
       is-promise: registry.npmmirror.com/is-promise/2.2.2
       promise: registry.npmmirror.com/promise/7.3.1
     dev: true
+
+  registry.npmmirror.com/lipper/0.4.4:
+    resolution: {integrity: sha512-SyyVjyDrKZKCxSrrZaJq2ts+sQlGvmxTNFOjRPbqdVL2SpkYiMw7t926rEfxv7ndd5LYnH7Vj+Y0k7mfsIThJA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lipper/-/lipper-0.4.4.tgz}
+    name: lipper
+    version: 0.4.4
+    dev: false
 
   registry.npmmirror.com/magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/magic-string/-/magic-string-0.25.9.tgz}

@@ -2,6 +2,8 @@
 font-color = #252525;
 bg-light-color = #fafafa;
 primary-color = #fdd800;
+dark-color = #111;
+white-color = #fafafa;
 
 // width
 page-max-width = 1440px;
@@ -9,8 +11,24 @@ page-max-width = 1440px;
 // mixin
 link()
   color font-color;
-  &-active
+  &.active
     color primary-color;
 block-center()
   margin-left auto;
   margin-right auto;
+
+page-block()
+  max-width: page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+
+clearfix()
+  &::after
+    display block;
+    height 0;
+    clear both;
+    content '';
+boxshadow()
+  border: 6px solid dark-color;
+  box-shadow: 6px 16px 1px rgba(0, 0, 0, .5), 4px 8px 1px rgba(0, 0, 0, .5) inset;

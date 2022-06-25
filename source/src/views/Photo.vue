@@ -1,5 +1,6 @@
 <template lang="pug">
-.fe-photo photo
+.fe-photo
+  .fe-placeholder 建设中...
 </template>
 
 <script setup></script>

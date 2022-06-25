@@ -1,0 +1,69 @@
+.fe-home
+  &-block
+    min-height 600px;
+    &-inner
+      max-width page-max-width;
+      padding 72px 24px;
+      block-center();
+      clearfix();
+    &-title
+      font-size 24px;
+      padding 8px 0;
+    &-body
+      padding 8px 0;
+      line-height 2;
+    &-left
+      width 60%
+      float left;
+      img
+        boxshadow();
+      &-fc-btn
+        width 120px;
+        height 80px;
+        line-height 80px;
+        margin-right 80px;
+        text-align center;
+        cursor pointer;
+        background-color dark-color;
+        color white-color;
+        &:hover
+          background-color #333;
+
+    &-right
+      width 35%
+      float right;
+      &-lipper
+        text-align center;
+        // background-color #333;
+        min-height 400px;
+        line-height 400px;
+        color #1a1a1a;
+        font-size 360px;
+        user-select none;
+    &:nth-child(even)
+      color dark-color;
+      background-color #fafafa;
+    &:nth-child(odd)
+      background-color dark-color;
+      &, a
+        color white-color;
+      .fe-home-block-left
+        width 35%;
+      .fe-home-block-right
+        width 60%;
+    
+  &-nav
+    padding 48px 0;
+    text-align center;
+  &-epage
+    margin 36px 0;
+  &-calc
+    margin 36px;
+    position relative
+    top -24px;
+  &-fullscreen
+    margin 36px 0;
+  &-lipper
+    position relative
+    top -24px;
+    margin 36px;

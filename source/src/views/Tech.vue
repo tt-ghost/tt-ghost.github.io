@@ -1,6 +1,6 @@
 <template lang="pug">
-.fe-tech tech
-
+.fe-tech
+  .fe-placeholder 建设中...
 </template>
 
 <script setup></script>
