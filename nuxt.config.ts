@@ -13,6 +13,18 @@ export default defineNuxtConfig({
       ],
       script: [
         {
+          async: true,
+          src: "https://www.googletagmanager.com/gtag/js?id=UA-62287374-3",
+        },
+        {
+          innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-62287374-3');
+          `,
+        },
+        {
           innerHTML: `
            var _hmt = _hmt || [];
           (function() {
