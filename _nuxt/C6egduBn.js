@@ -1,0 +1,1 @@
+import{s as e,c as t,o}from"./CiZnNBTQ.js";const r={frameborder:"0",style:{width:"100%",height:"100vh"},src:"https://play2048.co/",noborder:""},_={__name:"index",setup(s){return e(()=>{}),(a,c)=>(o(),t("iframe",r))}};export{_ as default};
