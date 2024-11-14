@@ -82,7 +82,7 @@ const games = ref([
     title: "2048",
     name: "2048",
     type: "static", // 通过静态资源访问
-    url: "/_games/2048/",
+    url: "/_online/games/2048/",
     repository: "https://github.com/gabrielecirulli/2048",
     license: "MIT",
     cover:
