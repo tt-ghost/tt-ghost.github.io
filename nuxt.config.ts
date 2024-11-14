@@ -4,11 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      title: "开源系统|在线游戏|在线示例|FE1024",
+      title: "在线游戏|在线示例|FE1024",
       meta: [
         {
           name: "description",
-          content: "FE1024 在线示例演示|开源项目|开源游戏",
+          content: "FE1024 在线游戏|在线示例|网页游戏|开源",
         },
       ],
       script: [
