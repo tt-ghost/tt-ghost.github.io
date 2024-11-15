@@ -1,0 +1,1 @@
+import{m as e,s as o,c as t,o as r}from"./oXR_ajua.js";const s={frameborder:"0",style:{width:"100%",height:"100vh"},src:"https://ellisonleao.github.io/clumsy-bird/",noborder:""},m=e({__name:"index",setup(n){return o(()=>{}),(a,c)=>(r(),t("iframe",s))}});export{m as default};
