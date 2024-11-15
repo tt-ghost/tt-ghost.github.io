@@ -67,7 +67,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import { defaultGames } from "@/pages/online/games/constant";
+import { defaultGames } from "@/utils/games";
 
 const games = ref(defaultGames());
 </script>
