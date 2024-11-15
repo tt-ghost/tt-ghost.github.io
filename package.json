@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "gen": "nuxt generate",
     "generate": "nuxt generate && cp -af ./.output/public/* ./.",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

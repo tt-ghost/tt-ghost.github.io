@@ -4,6 +4,9 @@
     <NuxtPage />
   </NuxtLayout>
 </template>
+<script setup lang="ts">
+console.log("app");
+</script>
 <style lang="less">
 html,
 body {

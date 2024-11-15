@@ -32,8 +32,8 @@
               <template #title>
                 <div style="position: relative; padding: 8px 0">
                   <span>{{ game.title }}</span>
-                  <nuxt-link
-                    :to="game.url"
+                  <a-link
+                    :href="game.url"
                     target="_blank"
                     style="
                       position: absolute;
@@ -43,7 +43,7 @@
                     "
                   >
                     <a-button type="text">去玩玩</a-button>
-                  </nuxt-link>
+                  </a-link>
                 </div>
               </template>
               <template #description>
