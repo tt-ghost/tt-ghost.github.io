@@ -56,4 +56,40 @@ export const defaultGames = () => [
     cover:
       "https://camo.githubusercontent.com/9e7e305776d534a3e53ccdac8323077c013bf44ddf6642b69a405819decba2d4/68747470733a2f2f6269746275636b65742e6f72672f736861756e65772f7061632d6d616e2f7261772f3437313438303032333361392f73686f74732f6d6f6e74616765322e706e67",
   },
+  {
+    title: "贪吃蛇",
+    name: "Snake Game",
+    type: "static", // 通过静态资源访问
+    url: "/_online/games/JavaScript-Snake/",
+    repository: "https://github.com/patorjk/JavaScript-Snake",
+    license: "MIT",
+    cover: "/_online/games/JavaScript-Snake/cover.png",
+  },
+  {
+    title: "星球大战",
+    name: "star-battle",
+    type: "static", // 通过静态资源访问
+    url: "/_online/games/star-battle/",
+    repository: "https://github.com/gd4Ark/star-battle",
+    license: "MIT",
+    cover: "/_online/games/star-battle/cover.png",
+  },
+  {
+    title: "俄罗斯方块",
+    name: "react-tetris",
+    type: "static", // 通过静态资源访问
+    url: "/_online/games/react-tetris/docs/",
+    repository: "https://github.com/chvin/react-tetris",
+    license: "MIT",
+    cover: "/_online/games/react-tetris/cover.png",
+  },
+  {
+    title: "迷你高尔夫",
+    name: "minigolf",
+    type: "static",
+    url: "/_online/games/minigolf/",
+    repository: "https://github.com/mgerdes/Open-Golf",
+    license: "MIT",
+    cover: "/_online/games/minigolf/cover.png",
+  },
 ];
