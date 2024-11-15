@@ -78,7 +78,7 @@ export const defaultGames = () => [
     title: "俄罗斯方块",
     name: "react-tetris",
     type: "static", // 通过静态资源访问
-    url: "/_online/games/react-tetris/docs/",
+    url: "/_online/games/react-tetris/",
     repository: "https://github.com/chvin/react-tetris",
     license: "MIT",
     cover: "/_online/games/react-tetris/cover.png",
