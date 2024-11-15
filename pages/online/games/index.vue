@@ -1,6 +1,12 @@
 <template>
-  <div>Games</div>
+  <div class="fe-games">
+    <FeCardItems :list="games" />
+  </div>
 </template>
 <script setup lang="ts">
-console.log("Games");
+import { ref } from "vue";
+import { defaultGames } from "@/utils/games";
+const gameList = defaultGames();
+
+const games = ref(gameList);
 </script>

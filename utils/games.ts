@@ -53,8 +53,7 @@ export const defaultGames = () => [
     url: "/_online/games/pacman/",
     repository: "https://github.com/masonicGIT/pacman",
     license: "GPL-3.0",
-    cover:
-      "https://camo.githubusercontent.com/9e7e305776d534a3e53ccdac8323077c013bf44ddf6642b69a405819decba2d4/68747470733a2f2f6269746275636b65742e6f72672f736861756e65772f7061632d6d616e2f7261772f3437313438303032333361392f73686f74732f6d6f6e74616765322e706e67",
+    cover: "/_online/games/pacman/cover.png",
   },
   {
     title: "贪吃蛇",

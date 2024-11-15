@@ -1,73 +1,13 @@
 <template>
   <div class="fe-home">
-    <a-card class="fe-home-game" title="游戏" :bordered="false">
-      <template #extra>
-        <a-link href="/online/games">查看更多</a-link>
-      </template>
-      <a-row :gutter="20">
-        <a-col
-          v-for="(game, key) in games"
-          :md="12"
-          :lg="10"
-          :xl="8"
-          :xxl="6"
-          :style="{ marginBottom: '20px' }"
-          :key="key"
-        >
-          <a-card hoverable :style="{ minWidth: '320px', maxWidth: '480px' }">
-            <template #cover>
-              <div
-                :style="{
-                  height: '160px',
-                  overflow: 'hidden',
-                }"
-              >
-                <img
-                  :style="{ width: '100%', transform: 'translateY(-20px)' }"
-                  :src="game.cover"
-                />
-              </div>
-            </template>
-            <a-card-meta>
-              <template #title>
-                <div style="position: relative; padding: 8px 0">
-                  <span>{{ game.title }}</span>
-                  <a-link
-                    :href="game.url"
-                    target="_blank"
-                    style="
-                      position: absolute;
-                      right: 0;
-                      top: 2px;
-                      font-weight: normal;
-                    "
-                  >
-                    <a-button type="text">去玩玩</a-button>
-                  </a-link>
-                </div>
-              </template>
-              <template #description>
-                <a-descriptions :column="1">
-                  <a-descriptions-item label="Github">
-                    <a-link target="_blank" :href="game.repository">
-                      {{ game.name }}
-                    </a-link>
-                  </a-descriptions-item>
-                  <a-descriptions-item label="License">
-                    {{ game.license }}
-                  </a-descriptions-item>
-                </a-descriptions>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-      </a-row>
-    </a-card>
+    <FeCardItems :list="games" title="游戏" more-link="/online/games" />
+    <!-- <FeCardItems :list="cmses" title="管理系统" more-link="/online/cms" /> -->
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
 import { defaultGames } from "@/utils/games";
+// const gameList = defaultGames().slice(0, 8);
 
 const games = ref(defaultGames());
 </script>
