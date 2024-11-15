@@ -1,0 +1,1 @@
+import{d as t,_ as o}from"./XbJ8nLDY.js";import{m as a,r as n,c as m,b as c,o as r}from"./xlocQeNq.js";const _={class:"fe-home"},u=a({__name:"index",setup(l){const e=n(t());return(i,d)=>{const s=o;return r(),m("div",_,[c(s,{list:e.value,title:"游戏","more-link":"/online/games"},null,8,["list"])])}}});export{u as default};
