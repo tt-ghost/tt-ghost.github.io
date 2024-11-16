@@ -91,4 +91,13 @@ export const defaultGames = () => [
     license: "MIT",
     cover: "/_online/games/minigolf/cover.png",
   },
+  {
+    title: "盖楼",
+    name: "tower_game",
+    type: "static",
+    url: "/_online/games/tower_game/",
+    repository: "https://github.com/iamkun/tower_game",
+    license: "MIT",
+    cover: "/_online/games/tower_game/cover.png",
+  },
 ];
