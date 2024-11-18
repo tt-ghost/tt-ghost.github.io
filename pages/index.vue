@@ -1,7 +1,8 @@
 <template>
   <div class="fe-home">
+    <!-- <FeSearch />
+    <FeFilter /> -->
     <FeCardItems :list="games" title="游戏" more-link="/online/games" />
-    <!-- <FeCardItems :list="cmses" title="管理系统" more-link="/online/cms" /> -->
   </div>
 </template>
 <script setup lang="ts">
