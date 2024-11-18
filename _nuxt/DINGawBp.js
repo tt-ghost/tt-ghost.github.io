@@ -1,0 +1,1 @@
+import{m as e,n as o,c as t,o as n}from"./OGP0MK-b.js";const r={frameborder:"0",style:{width:"100%",height:"100vh"},src:"https://ellisonleao.github.io/clumsy-bird/",noborder:""},m=e({__name:"index",setup(s){return o(()=>{}),(a,c)=>(n(),t("iframe",r))}});export{m as default};

@@ -1,0 +1,1 @@
+import{m as e,c as t,o}from"./OGP0MK-b.js";const r={frameborder:"0",style:{width:"100%",height:"100vh"},src:"https://cdn.fe1024.com/webstatic/fe1024/games/2048/index.html",noborder:""},m=e({__name:"index",setup(n){return(s,c)=>(o(),t("iframe",r))}});export{m as default};

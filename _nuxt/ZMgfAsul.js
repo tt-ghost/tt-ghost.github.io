@@ -1,0 +1,1 @@
+import{_ as a,d as o}from"./cxuK2Mav.js";import{m as n,r as c,c as m,b as r,o as _}from"./OGP0MK-b.js";const i={class:"fe-games"},g=n({__name:"index",setup(l){const e=o(),s=c(e);return(d,f)=>{const t=a;return _(),m("div",i,[r(t,{list:s.value},null,8,["list"])])}}});export{g as default};
