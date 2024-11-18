@@ -87,7 +87,6 @@ const urlMap: any = {
   crm: "/online/crm/",
 };
 const getUrl = (item: any, prop: string) => {
-  console.log(11, item, prop);
   if (item[prop] && /^http/.test(item[prop])) return item[prop];
 
   const baseUrl = urlMap[props.type];

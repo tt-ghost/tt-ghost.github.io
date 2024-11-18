@@ -1,0 +1,1 @@
+import{m as t,o as r,c as a,q as c}from"./DhUrEDIg.js";const n=["src"],d=t({__name:"index",props:{data:{type:Object,default:()=>null},src:{type:String,default:""}},setup(e){return(o,s)=>e.data?(r(),a("iframe",{key:0,class:"fe-iframe",frameborder:"0",src:e.src,noborder:""},null,8,n)):c("",!0)}});export{d as _};
