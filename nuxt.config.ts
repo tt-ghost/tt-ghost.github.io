@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import { defaultGames } from "./utils/games";
+
 const prodScripts = [
   {
     async: true,
@@ -47,5 +49,8 @@ export default defineNuxtConfig({
       ],
       script,
     },
+  },
+  generate: {
+    routes: defaultGames().map((item: any) => `/online/games/${item.name}`),
   },
 });

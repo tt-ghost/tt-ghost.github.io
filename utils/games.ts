@@ -24,13 +24,14 @@ export const defaultGames = () => [
     cover:
       "https://cdn.fe1024.com/webstatic/fe1024/games/hextris/images/icons/maskable-512.webp",
   },
-  // {
-  //   title: "滑动拼图",
-  //   name: "sliding_puzzle",
-  //   repository: "https://github.com/gamedolphin/sliding_puzzle",
-  //   license: "Unknow",
-  //   cover: "/_online/games/sliding_puzzle/assets/cover.png",
-  // },
+  {
+    title: "滑动拼图",
+    name: "sliding_puzzle",
+    repository: "https://github.com/gamedolphin/sliding_puzzle",
+    license: "Unknow",
+    cover:
+      "https://cdn.fe1024.com/webstatic/fe1024/games/sliding_puzzle/cover.png",
+  },
   // {
   //   title: "超级马里奥",
   //   name: "backbone-game-engine",
@@ -39,13 +40,13 @@ export const defaultGames = () => [
   //   cover:
   //     "/_online/games/backbone-game-engine/docs/super-mario-bros-level-1-1.png",
   // },
-  // {
-  //   title: "吃豆人",
-  //   name: "Pac-Man",
-  //   repository: "https://github.com/masonicGIT/pacman",
-  //   license: "GPL-3.0",
-  //   cover: "/_online/games/pacman/cover.png",
-  // },
+  {
+    title: "吃豆人",
+    name: "pacman",
+    repository: "https://github.com/masonicGIT/pacman",
+    license: "GPL-3.0",
+    cover: "https://cdn.fe1024.com/webstatic/fe1024/games/pacman/cover.png",
+  },
   // {
   //   title: "贪吃蛇",
   //   name: "Snake Game",
@@ -60,20 +61,21 @@ export const defaultGames = () => [
   //   license: "MIT",
   //   cover: "/_online/games/star-battle/cover.png",
   // },
-  // {
-  //   title: "俄罗斯方块",
-  //   name: "react-tetris",
-  //   repository: "https://github.com/chvin/react-tetris",
-  //   license: "MIT",
-  //   cover: "/_online/games/react-tetris/cover.png",
-  // },
-  // {
-  //   title: "迷你高尔夫",
-  //   name: "minigolf",
-  //   repository: "https://github.com/mgerdes/Open-Golf",
-  //   license: "MIT",
-  //   cover: "/_online/games/minigolf/cover.png",
-  // },
+  {
+    title: "俄罗斯方块",
+    name: "react-tetris",
+    repository: "https://github.com/chvin/react-tetris",
+    license: "MIT",
+    cover:
+      "https://cdn.fe1024.com/webstatic/fe1024/games/react-tetris/cover.png",
+  },
+  {
+    title: "迷你高尔夫",
+    name: "minigolf",
+    repository: "https://github.com/mgerdes/Open-Golf",
+    license: "MIT",
+    cover: "https://cdn.fe1024.com/webstatic/fe1024/games/minigolf/cover.png",
+  },
   // {
   //   title: "盖楼",
   //   name: "tower_game",
