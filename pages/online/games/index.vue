@@ -5,8 +5,10 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import { defaultGames } from "@/utils/games";
-const gameList = defaultGames();
+// import { defaultGames } from "@/utils/games";
+// const gameList = defaultGames();
 
-const games = ref(gameList);
+const { data } = await useFetch("/api/game/list");
+
+const games = data;
 </script>

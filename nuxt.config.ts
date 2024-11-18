@@ -39,6 +39,12 @@ export default defineNuxtConfig({
           content: "FE1024 在线游戏|在线示例|网页游戏|开源",
         },
       ],
+      link: [
+        {
+          rel: "stylesheet",
+          href: "https://unpkg.com/@arco-design/web-vue@2.56.3/dist/arco.min.css",
+        },
+      ],
       script,
     },
   },

@@ -23,7 +23,7 @@
             >
               <img
                 :style="{ width: '100%', transform: 'translateY(-20px)' }"
-                :src="item.cover"
+                :src="getUrl(item, 'cover')"
               />
             </div>
           </template>
@@ -32,7 +32,7 @@
               <div style="position: relative; padding: 8px 0">
                 <span>{{ item.title }}</span>
                 <a-link
-                  :href="item.url"
+                  :href="getUrl(item, 'name')"
                   target="_blank"
                   style="
                     position: absolute;
@@ -64,7 +64,7 @@
   </a-card>
 </template>
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   list: {
     type: Array,
     default: () => [],
@@ -77,7 +77,24 @@ defineProps({
     type: String,
     default: "",
   },
+  type: {
+    type: String,
+    default: "game",
+  },
 });
+const urlMap: any = {
+  game: "/online/games/",
+  crm: "/online/crm/",
+};
+const getUrl = (item: any, prop: string) => {
+  console.log(11, item, prop);
+  if (item[prop] && /^http/.test(item[prop])) return item[prop];
+
+  const baseUrl = urlMap[props.type];
+  if (!baseUrl) return "";
+
+  return baseUrl + item[prop];
+};
 </script>
 <style>
 .fe-card-items {

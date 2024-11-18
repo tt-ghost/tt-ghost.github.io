@@ -1,8 +1,8 @@
 export const defaultGames = () => [
   {
     title: "Clumsy Bird",
-    name: "Clumsy Bird",
-    url: "/online/games/clumsy-bird",
+    name: "clumsy-bird",
+    url: "https://ellisonleao.github.io/clumsy-bird/",
     repository: "https://github.com/ellisonleao/clumsy-bird",
     license: "GPL-3.0",
     cover:
@@ -11,8 +11,6 @@ export const defaultGames = () => [
   {
     title: "2048",
     name: "2048",
-    type: "static", // 通过静态资源访问
-    url: "/online/games/2048/",
     repository: "https://github.com/gabrielecirulli/2048",
     license: "MIT",
     cover:
@@ -21,8 +19,6 @@ export const defaultGames = () => [
   {
     title: "Hextris",
     name: "hextris",
-    type: "static", // 通过静态资源访问
-    url: "/_online/games/hextris/",
     repository: "https://github.com/Hextris/hextris",
     license: "MIT",
     cover: "/_online/games/hextris/images/icons/maskable-512.webp",
@@ -30,8 +26,6 @@ export const defaultGames = () => [
   {
     title: "滑动拼图",
     name: "sliding_puzzle",
-    type: "static", // 通过静态资源访问
-    url: "/_online/games/sliding_puzzle/",
     repository: "https://github.com/gamedolphin/sliding_puzzle",
     license: "Unknow",
     cover: "/_online/games/sliding_puzzle/assets/cover.png",
@@ -39,8 +33,6 @@ export const defaultGames = () => [
   {
     title: "超级马里奥",
     name: "backbone-game-engine",
-    type: "static", // 通过静态资源访问
-    url: "/_online/games/backbone-game-engine/super-mario-bros/",
     repository: "https://github.com/martindrapeau/backbone-game-engine",
     license: "MIT",
     cover:
@@ -49,8 +41,6 @@ export const defaultGames = () => [
   {
     title: "吃豆人",
     name: "Pac-Man",
-    type: "static", // 通过静态资源访问
-    url: "/_online/games/pacman/",
     repository: "https://github.com/masonicGIT/pacman",
     license: "GPL-3.0",
     cover: "/_online/games/pacman/cover.png",
@@ -58,8 +48,6 @@ export const defaultGames = () => [
   {
     title: "贪吃蛇",
     name: "Snake Game",
-    type: "static", // 通过静态资源访问
-    url: "/_online/games/JavaScript-Snake/",
     repository: "https://github.com/patorjk/JavaScript-Snake",
     license: "MIT",
     cover: "/_online/games/JavaScript-Snake/cover.png",
@@ -67,8 +55,6 @@ export const defaultGames = () => [
   {
     title: "星球大战",
     name: "star-battle",
-    type: "static", // 通过静态资源访问
-    url: "/_online/games/star-battle/",
     repository: "https://github.com/gd4Ark/star-battle",
     license: "MIT",
     cover: "/_online/games/star-battle/cover.png",
@@ -76,8 +62,6 @@ export const defaultGames = () => [
   {
     title: "俄罗斯方块",
     name: "react-tetris",
-    type: "static", // 通过静态资源访问
-    url: "/_online/games/react-tetris/",
     repository: "https://github.com/chvin/react-tetris",
     license: "MIT",
     cover: "/_online/games/react-tetris/cover.png",
@@ -85,8 +69,6 @@ export const defaultGames = () => [
   {
     title: "迷你高尔夫",
     name: "minigolf",
-    type: "static",
-    url: "/_online/games/minigolf/",
     repository: "https://github.com/mgerdes/Open-Golf",
     license: "MIT",
     cover: "/_online/games/minigolf/cover.png",
@@ -94,8 +76,6 @@ export const defaultGames = () => [
   {
     title: "盖楼",
     name: "tower_game",
-    type: "static",
-    url: "/_online/games/tower_game/",
     repository: "https://github.com/iamkun/tower_game",
     license: "MIT",
     cover: "/_online/games/tower_game/cover.png",
