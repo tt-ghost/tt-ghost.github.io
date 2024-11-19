@@ -83,4 +83,12 @@ export const defaultGames = () => [
   //   license: "MIT",
   //   cover: "/_online/games/tower_game/cover.png",
   // },
+  // {
+  //   title: "2D_Breakout",
+  //   name: "2D_Breakout",
+  //   url: "https://ai-bar.cn/fe1024-demo/games/2D_Breakout/",
+  //   // repository: "https://github.com/mgerdes/Open-Golf",
+  //   // license: "MIT",
+  //   cover: "https://ai-bar.cn/fe1024-demo/games_img/2D_Breakout.webp",
+  // },
 ];
