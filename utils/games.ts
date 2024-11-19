@@ -838,10 +838,10 @@ export const defaultGames = () => [
     cover: fe1024img("Catch_Him.png"),
   },
   {
-    title: "Catch the falling Stars",
-    name: "Catch the falling Stars",
-    url: fe1024("Catch the falling Stars"),
-    cover: fe1024img("Catch the falling Stars.png"),
+    title: "Catch-the-falling-Stars",
+    name: "Catch-the-falling-Stars",
+    url: fe1024("Catch-the-falling-Stars"),
+    cover: fe1024img("Catch-the-falling-Stars.png"),
   },
   {
     title: "CatchTheBall",
@@ -1179,7 +1179,7 @@ export const defaultGames = () => [
     url: fe1024("Cut_the_rope"),
     cover: fe1024img("Cut_the_rope.webp"),
   },
-  
+
   // {
   //   title: "DNA_Sequencer",
   //   name: "DNA_Sequencer",
