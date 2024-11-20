@@ -11,8 +11,8 @@ console.log("app");
 body {
   background-position: 50%;
   background-size: 150%;
-  --ca-bg-color-from: #e6eccc;
-  --ca-bg-color-to: #bbd7e0;
+  --ca-bg-color-from: #253a4e;
+  --ca-bg-color-to: #202940;
   background-color: var(--ca-bg-color-to);
   background-image: radial-gradient(
     circle,

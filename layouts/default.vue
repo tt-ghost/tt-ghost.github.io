@@ -32,7 +32,9 @@
       </a-page-header>
     </a-layout-header> -->
 
-    <div class="fe-layout-default-logo">FE1024</div>
+    <div class="fe-layout-default-logo">
+      <span class="fe-layout-default-logo-text">FE1024</span>
+    </div>
     <a-layout-content class="fe-layout-default-body">
       <slot></slot>
     </a-layout-content>
@@ -53,7 +55,7 @@ const route = useRoute();
 console.log(route.path);
 const activeMenu = ref([route.path || "/"]);
 
-const onMenuClick = (key) => {
+const onMenuClick = (key: any) => {
   console.log(32, key);
   activeMenu.value = [key];
   router.push(key);
@@ -72,8 +74,15 @@ const onMenuClick = (key) => {
     font-size: 60px;
     padding: 16px 8px 8px;
     font-weight: bold;
-    color: #333;
+    color: #e5e5e5;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    &-text {
+      background-image: linear-gradient(to right, #3593ff, #d149ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
 
   &-body {
