@@ -4,7 +4,17 @@
       <div
         class="fe-filter-item fe-filter-colorful-item"
         :class="`fe-filter-colorful-${item.color}`"
-        v-for="item in colorfulItems"
+        v-for="item in categoryItems"
+        :key="item.value"
+      >
+        {{ item.label }}
+      </div>
+    </div>
+    <div class="fe-filter-colorful">
+      <div
+        class="fe-filter-item fe-filter-colorful-item"
+        :class="`fe-filter-colorful-${item.color}`"
+        v-for="item in typeItems"
         :key="item.value"
       >
         {{ item.label }}
@@ -24,17 +34,11 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
+import { categoryOptions, typeOptions, licenseOptions } from "~/utils/constant";
 
-const colorfulItems = ref([
-  { label: "竞技", value: "jingji", color: "1" },
-  { label: "纸牌", value: "zhipai", color: "2" },
-]);
-
-const licenseItems = ref([
-  { label: "MIT", value: "MIT", color: "3" },
-  { label: "Apache-2.0", value: "Apache-2.0", color: "4" },
-  { label: "GPL-3.0", value: "GPL-3.0", color: "5" },
-]);
+const categoryItems = ref(categoryOptions());
+const typeItems = ref(typeOptions());
+const licenseItems = ref(licenseOptions());
 </script>
 <style lang="less">
 .fe-filter {
@@ -46,12 +50,11 @@ const licenseItems = ref([
       -webkit-transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
     display: inline-block;
     padding: 12px 18px;
-    border-radius: 12px;
-    margin: 0 5px 10px;
+    border-radius: 8px;
+    margin: 0 10px 10px 0;
     font-size: 13px;
     font-weight: bold;
     line-height: 15px;
-    margin: 0 0 0 7px;
     white-space: nowrap;
     &:hover {
       cursor: pointer;

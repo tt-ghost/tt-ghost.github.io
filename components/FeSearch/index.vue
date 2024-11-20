@@ -6,36 +6,30 @@
       v-model="keyword"
       @press-enter="onSearch"
       @search="onSearch"
+      @input="onInput"
     />
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
+import { debounce } from "~/utils/helper";
 
 const keyword = ref("");
-
-defineProps({
-  data: {
-    type: Object,
-    default: () => null,
-  },
-  src: {
-    type: String,
-    default: "",
-  },
-});
+const emit = defineEmits(["search"]);
 
 const onSearch = () => {
-  console.log(keyword.value);
+  emit("search", keyword.value);
 };
+const onInput = debounce(onSearch, 300);
 </script>
 <style lang="less">
 .fe-search {
-  min-width: 300px;
+  min-width: 200px;
   max-width: 600px;
-  width: 50%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 32px;
   .arco-input-wrapper {
     background-color: #fff;
     border-radius: 30px;

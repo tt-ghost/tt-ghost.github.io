@@ -1,6 +1,6 @@
 <template>
   <a-list
-    :grid-props="{ gutter: [20, 20], xs: 24, sm: 12, md: 6, lg: 6, xl: 4 }"
+    :grid-props="{ gutter: [16, 16], xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }"
     :data="list"
     :bordered="false"
   >
