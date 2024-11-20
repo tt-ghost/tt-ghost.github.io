@@ -7,7 +7,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import { defaultGames } from "@/utils/games";
+import defaultGames from "@/utils/games";
 // const gameList = defaultGames().slice(0, 8);
 
 const games = ref(defaultGames());

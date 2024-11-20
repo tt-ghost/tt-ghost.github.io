@@ -47,12 +47,12 @@
             </template>
             <template #description>
               <a-descriptions :column="1">
-                <a-descriptions-item label="Github">
+                <a-descriptions-item v-if="item.repository" label="Github">
                   <a-link target="_blank" :href="item.repository">
                     {{ item.name }}
                   </a-link>
                 </a-descriptions-item>
-                <a-descriptions-item label="License">
+                <a-descriptions-item v-if="item.license" label="License">
                   {{ item.license }}
                 </a-descriptions-item>
               </a-descriptions>

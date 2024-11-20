@@ -1,7 +1,7 @@
-import { defaultGames } from "@/utils/games";
+import games from "~/utils/games";
 
 export default defineEventHandler((event) => {
   return {
-    list: defaultGames(),
+    list: games(),
   };
 });
