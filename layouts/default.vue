@@ -32,9 +32,9 @@
       </a-page-header>
     </a-layout-header> -->
 
-    <div class="fe-layout-default-logo">
+    <h1 class="fe-layout-default-logo">
       <span class="fe-layout-default-logo-text">FE1024</span>
-    </div>
+    </h1>
     <a-layout-content class="fe-layout-default-body">
       <slot></slot>
     </a-layout-content>
@@ -72,7 +72,6 @@ const onMenuClick = (key: any) => {
   &-logo {
     text-align: center;
     font-size: 60px;
-    padding: 16px 8px 8px;
     font-weight: bold;
     color: #e5e5e5;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
