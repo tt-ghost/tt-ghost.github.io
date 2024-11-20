@@ -87,7 +87,7 @@ const onMenuClick = (key: any) => {
 
   &-body {
     min-height: 500px;
-    padding: 32px;
+    padding: 32px 16px;
   }
 
   &-footer {
