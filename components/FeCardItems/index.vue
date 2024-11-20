@@ -19,7 +19,7 @@
         <div class="fe-card-items-item-text">
           <h3 class="fe-card-items-item-title">{{ item.title }}</h3>
         </div>
-        <span class="fe-card-items-item-license">
+        <span v-if="item.license" class="fe-card-items-item-license">
           {{ item.license }}
         </span>
         <span v-if="item.repository" class="fe-card-items-item-repo">
