@@ -26,5 +26,6 @@ provide("game", game);
   width: 100%;
   height: 100vh;
   display: block;
+  background-color: #fff;
 }
 </style>
