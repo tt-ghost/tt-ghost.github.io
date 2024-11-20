@@ -1,6 +1,6 @@
 <template>
   <a-layout class="fe-layout-default">
-    <a-layout-header class="fe-layout-default-header">
+    <!-- <a-layout-header class="fe-layout-default-header">
       <a-page-header :show-back="false">
         <template #title>
           <a-link style="font-size: 24px" to="/" :hoverable="false"
@@ -30,7 +30,9 @@
         </template>
         <template #extra></template>
       </a-page-header>
-    </a-layout-header>
+    </a-layout-header> -->
+
+    <div class="fe-layout-default-logo">FE1024</div>
     <a-layout-content class="fe-layout-default-body">
       <slot></slot>
     </a-layout-content>
@@ -64,6 +66,14 @@ const onMenuClick = (key) => {
   margin-right: auto;
   .arco-page-header-divider {
     display: none;
+  }
+  &-logo {
+    text-align: center;
+    font-size: 60px;
+    padding: 16px 8px 8px;
+    font-weight: bold;
+    color: #333;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 
   &-body {
