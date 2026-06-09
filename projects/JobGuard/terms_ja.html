@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>利用規約 — JobGuard</title>
+<link rel="stylesheet" href="assets/reset.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --accent: #01a7a8;
+    --accent-light: #e6f7f7;
+    --border: #e8e5e1;
+    --warn-bg: #fffbf0;
+    --warn-border: #f0e6cc;
+    --warn-text: #8b6914;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .effective {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .intro {
+    color: #3d3d3d;
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  p, li { color: #3d3d3d; font-size: 0.95rem; }
+  ul { list-style: disc; padding-left: 20px; margin: 8px 0 0; }
+  li { margin-bottom: 4px; }
+  .section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .section h2 i { color: var(--accent); margin-right: 8px; width: 18px; }
+  .disclaimer {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0 0;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .disclaimer i { color: var(--warn-text); margin-top: 2px; }
+  .disclaimer p { color: var(--warn-text); font-size: 0.9rem; }
+  .email-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .email-link:hover { text-decoration: underline; }
+  @media (max-width: 480px) {
+    .container { padding: 40px 16px 60px; }
+    h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <span class="badge"><i class="fa-solid fa-file-contract"></i> 利用規約</span>
+  <h1>利用規約</h1>
+  <p class="effective"><strong>発効日：</strong> 2026年6月9日</p>
+  <p class="intro">JobGuard（以下「本アプリ」）をご利用いただきありがとうございます。本アプリを利用することにより、以下の利用規約に同意したものとみなされます。同意いただけない場合は、利用を中止してください。</p>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-circle-info"></i>1. サービス内容</h2>
+    <p>JobGuard は、以下の機能を提供する求職支援ツールです：</p>
+    <ul style="margin-top:8px">
+      <li>求人情報（JD）のリスク分析</li>
+      <li>応募進捗管理</li>
+      <li>面接スケジュール管理</li>
+      <li>データ統計・レポート</li>
+    </ul>
+    <div class="disclaimer">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <p><strong>重要：</strong> 本アプリが提供するリスク分析結果は参考情報であり、法的助言、キャリア助言、またはいかなる保証を構成するものではありません。ユーザーは自らの判断と専門家への相談に基づいて求職判断を行ってください。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-crown"></i>2. 無料版と Pro 版</h2>
+    <p><strong>無料版：</strong></p>
+    <ul>
+      <li>1 日 1 回の JD 分析（ローカル時間に基づき毎日リセット）</li>
+      <li>最大 3 件の応募追跡</li>
+      <li>基本レポート機能</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Pro 版（買い切り）：</strong></p>
+    <ul>
+      <li>無制限の JD 分析</li>
+      <li>無制限の応募追跡</li>
+      <li>完全な高度レポート（ファネル、コンバージョン推移、チャネル分析、給与分布など）</li>
+      <li>面接リマインダー通知</li>
+      <li>CSV データエクスポート</li>
+      <li>カスタムテーマ</li>
+    </ul>
+    <p style="margin-top:10px">Pro 版は生涯有効の買い切り型です。価格は App Store に表示される通りで、地域によって異なる場合があります。</p>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-user-check"></i>3. ユーザーの責任</h2>
+    <p>本アプリを利用することにより、以下に同意するものとします：</p>
+    <ul>
+      <li>本アプリを違法な目的で使用しないこと</li>
+      <li>リバースエンジニアリング、逆コンパイル、ハッキングを試みないこと</li>
+      <li>入力するすべての求人関連情報の正確性について自己責任で管理すること</li>
+      <li>分析結果に誤判定が含まれる可能性を理解し、受け入れること</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-registered"></i>4. 知的財産権</h2>
+    <p>JobGuard の名称、ロゴ、アイコン、インターフェースデザイン、分析ルールエンジン、およびすべてのオリジナルコンテンツは、本アプリ開発者の知的財産です。許可なく本アプリのいかなる部分も複製、改変、配布することを禁じます。</p>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-scale-balanced"></i>5. 免責事項</h2>
+    <p>本アプリは「現状有姿」で提供され、分析結果の正確性もしくは完全性、サービスの中断やエラーのない動作、または特定目的への適合性を含む、いかなる明示的または黙示的な保証も行いません。</p>
+    <p style="margin-top:10px">法律で認められる最大限の範囲において、開発者は本アプリの使用に起因する直接的、間接的、付随的、特別、または結果的損害について一切の責任を負いません。</p>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-gear"></i>6. サービスの変更・終了</h2>
+    <p>開発者は、機能調整、価格変更、サービス終了を含むがこれらに限定されない、本アプリのサービスを随時変更または終了する権利を留保します。重要な変更はアプリ内で通知されます。</p>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-arrow-rotate-left"></i>7. 返金ポリシー</h2>
+    <p>Pro 版購入の返金は、Apple の返金ポリシーに従って Apple が処理します。返金をご希望の場合は、Apple の「問題を報告する」ページから申請してください。</p>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-gavel"></i>8. 準拠法</h2>
+    <p>本規約は中華人民共和国の法律に準拠します。本規約に起因する紛争は、まず友好的な協議により解決を図るものとします。</p>
+  </div>
+
+  <div class="section">
+    <h2><i class="fa-solid fa-envelope"></i>9. お問い合わせ</h2>
+    <p>本利用規約に関するご質問は、<a class="email-link" href="#" data-user="ttghost" data-domain="126.com">Email</a> までご連絡ください。</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var links = document.querySelectorAll('.email-link');
+  for (var i = 0; i < links.length; i++) {
+    var el = links[i];
+    el.href = 'mailto:' + el.dataset.user + '@' + el.dataset.domain;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobGuardについて</title>
+<link rel="stylesheet" href="assets/reset.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --accent: #01a7a8;
+    --accent-light: #e6f7f7;
+    --border: #e8e5e1;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+  .logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin: 0 auto 40px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 48px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 40px 0 12px;
+    color: var(--text);
+  }
+  p, li { color: #3d3d3d; font-size: 0.95rem; }
+  ul { list-style: disc; padding-left: 20px; }
+  .feature-block {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .feature-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+  }
+  .feature-block strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .feature-block p {
+    margin: 0;
+    color: #555;
+  }
+  .meta {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .meta p { color: var(--text-muted); font-size: 0.9rem; }
+  .meta i { color: var(--accent); width: 20px; }
+  .email-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .email-link:hover { text-decoration: underline; }
+  @media (max-width: 480px) {
+    .container { padding: 40px 16px 60px; }
+    h1 { font-size: 1.6rem; }
+    .logo { width: 64px; height: 64px; border-radius: 16px; margin-bottom: 28px; }
+    .feature-block { padding: 20px; flex-direction: column; align-items: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <img class="logo" src="assets/logo_360.webp" alt="JobGuard ロゴ" width="80" height="80">
+  <h1>JobGuardについて</h1>
+  <p class="subtitle">より賢い求職活動のためのインテリジェントツール</p>
+
+  <p style="margin-bottom:32px">JobGuardは、求職者がリスクを特定し、進捗を管理し、より賢いキャリア判断を下すために設計されたインテリジェントツールです。</p>
+
+  <h2><i class="fa-solid fa-star" style="color:var(--accent);margin-right:8px"></i>主な機能</h2>
+
+  <div class="feature-block">
+    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+    <div>
+      <strong>JDリスク分析</strong>
+      <p>求人情報を貼り付けたりOCRで読み取ったりするだけで、JobGuardの内蔵ルールエンジンがテキストを分析し、信頼スコアと詳細なレポート（不審な条項、不足情報、HRに確認すべき質問など）を提供します。</p>
+    </div>
+  </div>
+
+  <div class="feature-block">
+    <div class="feature-icon"><i class="fa-solid fa-list-check"></i></div>
+    <div>
+      <strong>応募管理</strong>
+      <p>すべての応募をカンバン式タイムラインで管理。各ポジションのステータス（応募済み → 連絡済み → 面接中 → 内定）を追跡します。</p>
+    </div>
+  </div>
+
+  <div class="feature-block">
+    <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
+    <div>
+      <strong>面接カレンダー</strong>
+      <p>面接予定を記録し、応募情報と紐付け。日別・月別の面接概要を一目で確認できます。</p>
+    </div>
+  </div>
+
+  <div class="feature-block">
+    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+    <div>
+      <strong>データレポート</strong>
+      <p>Proユーザーは応募ファネル、面接コンバージョン推移、チャネル分析、給与分布などの高度なチャートにアクセスできます。</p>
+    </div>
+  </div>
+
+  <div class="feature-block">
+    <div class="feature-icon"><i class="fa-solid fa-table-cells"></i></div>
+    <div>
+      <strong>ホーム画面ウィジェット</strong>
+      <p>今日の面接数と近日の面接予定をホーム画面から素早く確認できます。</p>
+    </div>
+  </div>
+
+  <div class="feature-block">
+    <div class="feature-icon"><i class="fa-solid fa-language"></i></div>
+    <div>
+      <strong>多言語対応</strong>
+      <p>中国語、英語、日本語をワンタップで切り替え。</p>
+    </div>
+  </div>
+
+  <div class="feature-block">
+    <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+    <div>
+      <strong>完全ローカル処理</strong>
+      <p>すべての分析はデバイス上で実行されます。個人データの収集・アップロードは一切ありません。</p>
+    </div>
+  </div>
+
+  <div class="meta">
+    <p><i class="fa-solid fa-tag"></i> v1.0.0 · Build 1</p>
+    <p style="margin-top:16px"><i class="fa-solid fa-envelope"></i> <a class="email-link" href="#" data-user="ttghost" data-domain="126.com">お問い合わせ</a></p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var links = document.querySelectorAll('.email-link');
+  for (var i = 0; i < links.length; i++) {
+    var el = links[i];
+    el.href = 'mailto:' + el.dataset.user + '@' + el.dataset.domain;
+  }
+})();
+</script>
+</body>
+</html>
