@@ -60,4 +60,4 @@ We may update this Privacy Policy from time to time. The updated policy will be 
 
 ## 8. Contact Us
 
-If you have any questions about this Privacy Policy, please contact: **ttghost@126.com**
+If you have any questions about this Privacy Policy, please contact: **[Email](mailto://ttghost@126.com)**

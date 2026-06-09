@@ -41,4 +41,4 @@ v1.0.0 · Build 1
 
 ## Contact Us
 
-ttghost@126.com
+[Email](mailto://ttghost@126.com)

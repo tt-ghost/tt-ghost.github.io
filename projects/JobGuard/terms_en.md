@@ -67,4 +67,4 @@ These terms are governed by the laws of the People's Republic of China. Any disp
 
 ## 9. Contact Us
 
-For any questions about these Terms of Service, please contact: **ttghost@126.com**
+For any questions about these Terms of Service, please contact: **[Email](mailto://ttghost@126.com)**

@@ -41,4 +41,4 @@ v1.0.0 · Build 1
 
 ## お問い合わせ
 
-ttghost@126.com
+[Email](mailto://ttghost@126.com)

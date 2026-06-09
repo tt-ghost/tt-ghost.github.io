@@ -41,4 +41,4 @@ v1.0.0 · Build 1
 
 ## 联系我们
 
-ttghost@126.com
+[邮箱](mailto://ttghost@126.com)
