@@ -1,9 +1,15 @@
 ---
 ---
+
 @import "{{ site.theme }}";
 
 // 隐藏页面顶部的标题栏
-.page-header { display: none !important; }
+.site-header {
+  display: none !important;
+}
 
 // 隐藏页面底部的声明信息
-.site-footer { display: none !important; }
+.site-footer,
+.sub-footer {
+  display: none !important;
+}
