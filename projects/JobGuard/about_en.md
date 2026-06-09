@@ -1,4 +1,7 @@
-# About JobGuard
+---
+title: About JobGuard
+date: 2026-06-09
+---
 
 JobGuard is an intelligent tool designed for job seekers to identify risks, manage progress, and make smarter career decisions.
 

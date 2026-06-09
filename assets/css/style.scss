@@ -2,7 +2,8 @@
 ---
 
 // 隐藏页面顶部的标题栏
-.site-header {
+.site-header,
+.post-header {
   display: none !important;
 }
 
