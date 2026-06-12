@@ -1,199 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service — JobGuard</title>
-<link rel="stylesheet" href="assets/reset.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-  :root {
-    --bg: #faf9f7;
-    --text: #1a1a1a;
-    --text-muted: #6b6b6b;
-    --accent: #01a7a8;
-    --accent-light: #e6f7f7;
-    --border: #e8e5e1;
-    --warn-bg: #fffbf0;
-    --warn-border: #f0e6cc;
-    --warn-text: #8b6914;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 64px 24px 80px;
-  }
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: var(--accent-light);
-    padding: 6px 14px;
-    border-radius: 100px;
-    margin-bottom: 20px;
-  }
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-  .effective {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-  }
-  .intro {
-    color: #3d3d3d;
-    font-size: 0.95rem;
-    margin-bottom: 40px;
-  }
-  h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin: 0 0 10px;
-  }
-  p, li { color: #3d3d3d; font-size: 0.95rem; }
-  ul { list-style: disc; padding-left: 20px; margin: 8px 0 0; }
-  li { margin-bottom: 4px; }
-  .section {
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px 28px;
-    margin-bottom: 16px;
-    border: 1px solid var(--border);
-  }
-  .section h2 i { color: var(--accent); margin-right: 8px; width: 18px; }
-  .disclaimer {
-    background: var(--warn-bg);
-    border: 1px solid var(--warn-border);
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin: 12px 0 0;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .disclaimer i { color: var(--warn-text); margin-top: 2px; }
-  .disclaimer p { color: var(--warn-text); font-size: 0.9rem; }
-  .email-link {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .email-link:hover { text-decoration: underline; }
-  @media (max-width: 480px) {
-    .container { padding: 40px 16px 60px; }
-    h1 { font-size: 1.6rem; }
-  }
-</style>
-</head>
-<body>
-<div class="container">
-  <span class="badge"><i class="fa-solid fa-file-contract"></i> Terms of Service</span>
-  <h1>Terms of Service</h1>
-  <p class="effective"><strong>Effective Date:</strong> June 9, 2026</p>
-  <p class="intro">Welcome to JobGuard ("the App"). By using the App, you agree to these Terms of Service. If you do not agree, please discontinue use.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service — JobGuard</title>
+    <link rel="stylesheet" href="assets/reset.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --bg: #faf9f7;
+        --text: #1a1a1a;
+        --text-muted: #6b6b6b;
+        --accent: #01a7a8;
+        --accent-light: #e6f7f7;
+        --border: #e8e5e1;
+        --warn-bg: #fffbf0;
+        --warn-border: #f0e6cc;
+        --warn-text: #8b6914;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+          system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      .container {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 64px 24px 80px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: var(--accent-light);
+        padding: 6px 14px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+      .effective {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+      .intro {
+        color: #3d3d3d;
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: 0 0 10px;
+      }
+      p,
+      li {
+        color: #3d3d3d;
+        font-size: 0.95rem;
+      }
+      ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 8px 0 0;
+      }
+      li {
+        margin-bottom: 4px;
+      }
+      .section {
+        background: #fff;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 16px;
+        border: 1px solid var(--border);
+      }
+      .section h2 i {
+        color: var(--accent);
+        margin-right: 8px;
+        width: 18px;
+      }
+      .disclaimer {
+        background: var(--warn-bg);
+        border: 1px solid var(--warn-border);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin: 12px 0 0;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .disclaimer i {
+        color: var(--warn-text);
+        margin-top: 2px;
+      }
+      .disclaimer p {
+        color: var(--warn-text);
+        font-size: 0.9rem;
+      }
+      .email-link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .email-link:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 480px) {
+        .container {
+          padding: 40px 16px 60px;
+        }
+        h1 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="badge"
+        ><i class="fa-solid fa-file-contract"></i> Terms of Service</span
+      >
+      <h1>Terms of Service</h1>
+      <p class="effective"><strong>Effective Date:</strong> June 9, 2026</p>
+      <p class="intro">
+        Welcome to JobGuard ("the App"). By using the App, you agree to these
+        Terms of Service. If you do not agree, please discontinue use.
+      </p>
 
-  <div class="section">
-    <h2><i class="fa-solid fa-circle-info"></i>1. Service Description</h2>
-    <p>JobGuard is a job search assistant tool providing:</p>
-    <ul style="margin-top:8px">
-      <li>Job description (JD) risk analysis</li>
-      <li>Application progress tracking</li>
-      <li>Interview schedule management</li>
-      <li>Data statistics and reports</li>
-    </ul>
-    <div class="disclaimer">
-      <i class="fa-solid fa-triangle-exclamation"></i>
-      <p><strong>Important:</strong> The risk analysis results provided by this App are for reference only and do not constitute legal advice, career advice, or any form of guarantee. Users should exercise their own judgment and consult professionals when making career decisions.</p>
+      <div class="section">
+        <h2><i class="fa-solid fa-circle-info"></i>1. Service Description</h2>
+        <p>JobGuard is a job search assistant tool providing:</p>
+        <ul style="margin-top: 8px">
+          <li>Job description (JD) risk analysis</li>
+          <li>Application progress tracking</li>
+          <li>Interview schedule management</li>
+          <li>Data statistics and reports</li>
+        </ul>
+        <div class="disclaimer">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <p>
+            <strong>Important:</strong> The risk analysis results provided by
+            this App are for reference only and do not constitute legal advice,
+            career advice, or any form of guarantee. Users should exercise their
+            own judgment and consult professionals when making career decisions.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><i class="fa-solid fa-crown"></i>2. Free vs. Pro Version</h2>
+        <p><strong>Free Version:</strong></p>
+        <ul>
+          <li>1 JD analysis per day (resets daily based on local time)</li>
+          <li>Up to 3 tracked applications</li>
+          <li>Basic reporting features</li>
+        </ul>
+        <p style="margin-top: 12px">
+          <strong>Pro Version (One-time Purchase):</strong>
+        </p>
+        <ul>
+          <li>Unlimited JD analysis</li>
+          <li>Unlimited application tracking</li>
+          <li>
+            Full advanced reports (funnel, conversion trends, channel analysis,
+            salary distribution, etc.)
+          </li>
+          <li>Interview reminder notifications</li>
+          <li>CSV data export</li>
+          <li>Custom theme appearance</li>
+        </ul>
+        <p style="margin-top: 10px">
+          Pro is a one-time lifetime purchase. Price is as displayed on the App
+          Store and may vary by region.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><i class="fa-solid fa-user-check"></i>3. User Responsibilities</h2>
+        <p>By using the App, you agree to:</p>
+        <ul>
+          <li>Not use the App for any illegal purpose</li>
+          <li>Not attempt to reverse engineer, decompile, or hack the App</li>
+          <li>
+            Take responsibility for the accuracy of all job-related information
+            you input
+          </li>
+          <li>
+            Understand and accept that analysis results may contain errors or
+            misjudgments
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><i class="fa-solid fa-registered"></i>4. Intellectual Property</h2>
+        <p>
+          The JobGuard name, logo, icons, interface design, analysis rule
+          engine, and all original content are the intellectual property of the
+          App developer. Unauthorized copying, modification, or distribution of
+          any part of the App is prohibited.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><i class="fa-solid fa-scale-balanced"></i>5. Disclaimer</h2>
+        <p>
+          THE APP IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+          IMPLIED, INCLUDING BUT NOT LIMITED TO THE ACCURACY OR COMPLETENESS OF
+          ANALYSIS RESULTS, UNINTERRUPTED OR ERROR-FREE SERVICE, OR FITNESS FOR
+          A PARTICULAR PURPOSE.
+        </p>
+        <p style="margin-top: 10px">
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE DEVELOPER SHALL NOT BE
+          LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL
+          DAMAGES ARISING FROM THE USE OF THE APP.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>
+          <i class="fa-solid fa-gear"></i>6. Service Changes &amp; Termination
+        </h2>
+        <p>
+          The developer reserves the right to modify or discontinue the App's
+          services at any time, including but not limited to feature
+          adjustments, price changes, or service termination. Material changes
+          will be notified within the App.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><i class="fa-solid fa-arrow-rotate-left"></i>7. Refund Policy</h2>
+        <p>
+          Pro purchase refunds are handled by Apple according to their refund
+          policy. To request a refund, please use Apple's "Report a Problem"
+          page.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><i class="fa-solid fa-gavel"></i>8. Governing Law</h2>
+        <p>
+          These terms are governed by the laws of the People's Republic of
+          China. Any disputes arising from these terms shall first be resolved
+          through friendly negotiation.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><i class="fa-solid fa-envelope"></i>9. Contact Us</h2>
+        <p>
+          For any questions about these Terms of Service, please contact:
+          <a class="email-link" href="mailto:ttghost@126.com" target="_blank"
+            >Email</a
+          >
+        </p>
+      </div>
     </div>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-crown"></i>2. Free vs. Pro Version</h2>
-    <p><strong>Free Version:</strong></p>
-    <ul>
-      <li>1 JD analysis per day (resets daily based on local time)</li>
-      <li>Up to 3 tracked applications</li>
-      <li>Basic reporting features</li>
-    </ul>
-    <p style="margin-top:12px"><strong>Pro Version (One-time Purchase):</strong></p>
-    <ul>
-      <li>Unlimited JD analysis</li>
-      <li>Unlimited application tracking</li>
-      <li>Full advanced reports (funnel, conversion trends, channel analysis, salary distribution, etc.)</li>
-      <li>Interview reminder notifications</li>
-      <li>CSV data export</li>
-      <li>Custom theme appearance</li>
-    </ul>
-    <p style="margin-top:10px">Pro is a one-time lifetime purchase. Price is as displayed on the App Store and may vary by region.</p>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-user-check"></i>3. User Responsibilities</h2>
-    <p>By using the App, you agree to:</p>
-    <ul>
-      <li>Not use the App for any illegal purpose</li>
-      <li>Not attempt to reverse engineer, decompile, or hack the App</li>
-      <li>Take responsibility for the accuracy of all job-related information you input</li>
-      <li>Understand and accept that analysis results may contain errors or misjudgments</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-registered"></i>4. Intellectual Property</h2>
-    <p>The JobGuard name, logo, icons, interface design, analysis rule engine, and all original content are the intellectual property of the App developer. Unauthorized copying, modification, or distribution of any part of the App is prohibited.</p>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-scale-balanced"></i>5. Disclaimer</h2>
-    <p>THE APP IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE ACCURACY OR COMPLETENESS OF ANALYSIS RESULTS, UNINTERRUPTED OR ERROR-FREE SERVICE, OR FITNESS FOR A PARTICULAR PURPOSE.</p>
-    <p style="margin-top:10px">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE DEVELOPER SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OF THE APP.</p>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-gear"></i>6. Service Changes &amp; Termination</h2>
-    <p>The developer reserves the right to modify or discontinue the App's services at any time, including but not limited to feature adjustments, price changes, or service termination. Material changes will be notified within the App.</p>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-arrow-rotate-left"></i>7. Refund Policy</h2>
-    <p>Pro purchase refunds are handled by Apple according to their refund policy. To request a refund, please use Apple's "Report a Problem" page.</p>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-gavel"></i>8. Governing Law</h2>
-    <p>These terms are governed by the laws of the People's Republic of China. Any disputes arising from these terms shall first be resolved through friendly negotiation.</p>
-  </div>
-
-  <div class="section">
-    <h2><i class="fa-solid fa-envelope"></i>9. Contact Us</h2>
-    <p>For any questions about these Terms of Service, please contact: <a class="email-link" href="#" data-user="ttghost" data-domain="126.com">Email</a></p>
-  </div>
-</div>
-
-<script>
-(function() {
-  var links = document.querySelectorAll('.email-link');
-  for (var i = 0; i < links.length; i++) {
-    var el = links[i];
-    el.href = 'mailto:' + el.dataset.user + '@' + el.dataset.domain;
-  }
-})();
-</script>
-</body>
+  </body>
 </html>

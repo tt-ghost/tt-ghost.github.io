@@ -1,195 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>关于 JobGuard</title>
-<link rel="stylesheet" href="assets/reset.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-  :root {
-    --bg: #faf9f7;
-    --text: #1a1a1a;
-    --text-muted: #6b6b6b;
-    --accent: #01a7a8;
-    --accent-light: #e6f7f7;
-    --border: #e8e5e1;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.85;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 64px 24px 80px;
-  }
-  .logo {
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    margin: 0 auto 40px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-  }
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    text-align: center;
-    margin-bottom: 8px;
-  }
-  .subtitle {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    margin-bottom: 48px;
-  }
-  h2 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin: 40px 0 12px;
-    color: var(--text);
-  }
-  p, li { color: #3d3d3d; font-size: 0.95rem; }
-  ul { list-style: disc; padding-left: 20px; }
-  .feature-block {
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px 28px;
-    margin-bottom: 16px;
-    border: 1px solid var(--border);
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  .feature-icon {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: var(--accent-light);
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.05rem;
-  }
-  .feature-block strong {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 6px;
-    color: var(--text);
-  }
-  .feature-block p {
-    margin: 0;
-    color: #555;
-  }
-  .meta {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-  }
-  .meta p { color: var(--text-muted); font-size: 0.9rem; }
-  .meta i { color: var(--accent); width: 20px; }
-  .email-link {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .email-link:hover { text-decoration: underline; }
-  @media (max-width: 480px) {
-    .container { padding: 40px 16px 60px; }
-    h1 { font-size: 1.6rem; }
-    .logo { width: 64px; height: 64px; border-radius: 16px; margin-bottom: 28px; }
-    .feature-block { padding: 20px; flex-direction: column; align-items: center; text-align: center; }
-  }
-</style>
-</head>
-<body>
-<div class="container">
-  <img class="logo" src="assets/logo_360.webp" alt="JobGuard 标志" width="80" height="80">
-  <h1>关于 JobGuard</h1>
-  <p class="subtitle">为求职者打造的智能助手</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>关于 JobGuard</title>
+    <link rel="stylesheet" href="assets/reset.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --bg: #faf9f7;
+        --text: #1a1a1a;
+        --text-muted: #6b6b6b;
+        --accent: #01a7a8;
+        --accent-light: #e6f7f7;
+        --border: #e8e5e1;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.85;
+        -webkit-font-smoothing: antialiased;
+      }
+      .container {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 64px 24px 80px;
+      }
+      .logo {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        margin: 0 auto 40px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        margin-bottom: 48px;
+      }
+      h2 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: 40px 0 12px;
+        color: var(--text);
+      }
+      p,
+      li {
+        color: #3d3d3d;
+        font-size: 0.95rem;
+      }
+      ul {
+        list-style: disc;
+        padding-left: 20px;
+      }
+      .feature-block {
+        background: #fff;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 16px;
+        border: 1px solid var(--border);
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .feature-icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: var(--accent-light);
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.05rem;
+      }
+      .feature-block strong {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 6px;
+        color: var(--text);
+      }
+      .feature-block p {
+        margin: 0;
+        color: #555;
+      }
+      .meta {
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
+      .meta p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+      .meta i {
+        color: var(--accent);
+        width: 20px;
+      }
+      .email-link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .email-link:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 480px) {
+        .container {
+          padding: 40px 16px 60px;
+        }
+        h1 {
+          font-size: 1.6rem;
+        }
+        .logo {
+          width: 64px;
+          height: 64px;
+          border-radius: 16px;
+          margin-bottom: 28px;
+        }
+        .feature-block {
+          padding: 20px;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="logo"
+        src="assets/logo_360.webp"
+        alt="JobGuard 标志"
+        width="80"
+        height="80"
+      />
+      <h1>关于 JobGuard</h1>
+      <p class="subtitle">为求职者打造的智能助手</p>
 
-  <p style="margin-bottom:32px">JobGuard 是一款专为求职者打造的智能工具，帮助你在求职过程中识别风险、管理进度、做出更明智的决策。</p>
+      <p style="margin-bottom: 32px">
+        JobGuard
+        是一款专为求职者打造的智能工具，帮助你在求职过程中识别风险、管理进度、做出更明智的决策。
+      </p>
 
-  <h2><i class="fa-solid fa-star" style="color:var(--accent);margin-right:8px"></i>核心功能</h2>
+      <h2>
+        <i
+          class="fa-solid fa-star"
+          style="color: var(--accent); margin-right: 8px"
+        ></i
+        >核心功能
+      </h2>
 
-  <div class="feature-block">
-    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-    <div>
-      <strong>JD 风险分析</strong>
-      <p>粘贴或拍照上传招聘信息（JD），JobGuard 会基于内置规则引擎分析文本中的风险信号，给出信任评分和详细的风险报告，包括可疑条款、信息缺失项、建议追问 HR 的问题等。</p>
+      <div class="feature-block">
+        <div class="feature-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <strong>JD 风险分析</strong>
+          <p>
+            粘贴或拍照上传招聘信息（JD），JobGuard
+            会基于内置规则引擎分析文本中的风险信号，给出信任评分和详细的风险报告，包括可疑条款、信息缺失项、建议追问
+            HR 的问题等。
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-icon"><i class="fa-solid fa-list-check"></i></div>
+        <div>
+          <strong>投递追踪</strong>
+          <p>
+            以时间线方式管理你的所有投递记录，支持看板视图跟踪每个职位的状态（已投递
+            → 已沟通 → 面试中 → 已Offer）。
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-icon">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <div>
+          <strong>面试日历</strong>
+          <p>
+            记录面试安排，支持关联投递记录，一目了然查看每日、每月面试情况。
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div>
+          <strong>数据报告</strong>
+          <p>
+            Pro
+            用户可查看投递漏斗、面试转化率趋势、渠道分析、薪资分布等高级数据图表。
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-icon"><i class="fa-solid fa-table-cells"></i></div>
+        <div>
+          <strong>桌面小组件</strong>
+          <p>在桌面快速查看今日面试数量和即将到来的面试安排。</p>
+        </div>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-icon"><i class="fa-solid fa-language"></i></div>
+        <div>
+          <strong>多语言支持</strong>
+          <p>中文、English、日本語 三种语言一键切换。</p>
+        </div>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+        <div>
+          <strong>纯本地处理</strong>
+          <p>所有分析均在设备本地完成，不收集、不上传任何个人数据。</p>
+        </div>
+      </div>
+
+      <div class="meta">
+        <p><i class="fa-solid fa-tag"></i> v1.0.0 · Build 1</p>
+        <p style="margin-top: 16px">
+          <i class="fa-solid fa-envelope"></i>
+          <a class="email-link" href="mailto:ttghost@126.com" target="_blank"
+            >联系我们</a
+          >
+        </p>
+      </div>
     </div>
-  </div>
-
-  <div class="feature-block">
-    <div class="feature-icon"><i class="fa-solid fa-list-check"></i></div>
-    <div>
-      <strong>投递追踪</strong>
-      <p>以时间线方式管理你的所有投递记录，支持看板视图跟踪每个职位的状态（已投递 → 已沟通 → 面试中 → 已Offer）。</p>
-    </div>
-  </div>
-
-  <div class="feature-block">
-    <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
-    <div>
-      <strong>面试日历</strong>
-      <p>记录面试安排，支持关联投递记录，一目了然查看每日、每月面试情况。</p>
-    </div>
-  </div>
-
-  <div class="feature-block">
-    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-    <div>
-      <strong>数据报告</strong>
-      <p>Pro 用户可查看投递漏斗、面试转化率趋势、渠道分析、薪资分布等高级数据图表。</p>
-    </div>
-  </div>
-
-  <div class="feature-block">
-    <div class="feature-icon"><i class="fa-solid fa-table-cells"></i></div>
-    <div>
-      <strong>桌面小组件</strong>
-      <p>在桌面快速查看今日面试数量和即将到来的面试安排。</p>
-    </div>
-  </div>
-
-  <div class="feature-block">
-    <div class="feature-icon"><i class="fa-solid fa-language"></i></div>
-    <div>
-      <strong>多语言支持</strong>
-      <p>中文、English、日本語 三种语言一键切换。</p>
-    </div>
-  </div>
-
-  <div class="feature-block">
-    <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
-    <div>
-      <strong>纯本地处理</strong>
-      <p>所有分析均在设备本地完成，不收集、不上传任何个人数据。</p>
-    </div>
-  </div>
-
-  <div class="meta">
-    <p><i class="fa-solid fa-tag"></i> v1.0.0 · Build 1</p>
-    <p style="margin-top:16px"><i class="fa-solid fa-envelope"></i> <a class="email-link" href="#" data-user="ttghost" data-domain="126.com">联系我们</a></p>
-  </div>
-</div>
-
-<script>
-(function() {
-  var links = document.querySelectorAll('.email-link');
-  for (var i = 0; i < links.length; i++) {
-    var el = links[i];
-    el.href = 'mailto:' + el.dataset.user + '@' + el.dataset.domain;
-  }
-})();
-</script>
-</body>
+  </body>
 </html>
