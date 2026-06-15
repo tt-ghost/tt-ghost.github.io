@@ -70,7 +70,7 @@
       .nav-logo img {
         width: 32px;
         height: 32px;
-        border-radius: 8px;
+        border-radius: 4px;
       }
       .nav-links {
         display: flex;
@@ -230,7 +230,7 @@
         box-shadow:
           0 24px 80px rgba(0, 0, 0, 0.18),
           0 0 0 4px rgba(0, 0, 0, 0.1);
-        background: #000;
+        background: rgba(0, 0, 0, 0.05);
       }
       .hero-mockup .phone-frame img {
         width: 100%;
@@ -254,12 +254,22 @@
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        padding: 20px 0 32px;
-        scrollbar-width: none;
-        justify-content: center;
+        padding: 20px 0 8px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border) transparent;
       }
       .screenshots-scroll::-webkit-scrollbar {
-        display: none;
+        height: 5px;
+      }
+      .screenshots-scroll::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .screenshots-scroll::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 100px;
+      }
+      .screenshots-scroll::-webkit-scrollbar-thumb:hover {
+        background: #c0bdb8;
       }
       .screenshot-item {
         flex: 0 0 auto;
@@ -641,6 +651,22 @@
       }
 
       @media (max-width: 768px) {
+        .nav-inner {
+          padding: 12px 20px;
+        }
+        .nav-logo {
+          font-size: 1.05rem;
+        }
+        .nav-links {
+          gap: 14px;
+        }
+        .nav-links a {
+          font-size: 0.82rem;
+        }
+        .lang-pill {
+          font-size: 0.72rem;
+          padding: 4px 10px;
+        }
         .flow {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -653,6 +679,23 @@
         }
         .stat-num {
           font-size: 1.6rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .nav-logo span {
+          display: none;
+        }
+        .nav-links {
+          gap: 10px;
+        }
+        .nav-links a {
+          font-size: 0.78rem;
+        }
+        .lang-pill span {
+          display: none;
+        }
+        .lang-pill {
+          padding: 5px 8px;
         }
       }
       @media (max-width: 480px) {
@@ -684,14 +727,17 @@
     <nav>
       <div class="nav-inner">
         <a href="/" class="nav-logo">
-          <img src="assets/logo_360.webp" alt="JobGuard" />JobGuard
+          <img
+            src="https://cdn.ai-bar.cn/job-guard/logo_360.webp"
+            alt="JobGuard"
+          /><span>JobGuard</span>
         </a>
         <div class="nav-links">
           <a href="#features">Features</a>
           <a href="#how">How It Works</a>
           <a href="#privacy">Privacy</a>
           <span class="lang-pill"
-            ><i class="fa-solid fa-globe"></i> EN / 中 / 日</span
+            ><i class="fa-solid fa-globe"></i> <span>EN/中/日</span></span
           >
         </div>
       </div>
@@ -713,8 +759,9 @@
         </p>
         <div class="hero-actions">
           <a
-            href="https://apps.apple.com/app/jobguard/id0000000000"
+            href="https://apps.apple.com/us/app/jobguard/id6780220932"
             class="btn btn-primary"
+            target="_blank"
           >
             <i class="fa-brands fa-apple"></i> Download on App Store
           </a>
@@ -725,7 +772,7 @@
         <div class="hero-mockup">
           <div class="phone-frame">
             <img
-              src="https://cdn.ai-bar.cn/job-guard/snapshots/4-1.webp"
+              src="https://cdn.ai-bar.cn/job-guard/snapshots/3-1.webp"
               alt="JD Risk Analysis Screenshot"
               loading="eager"
               fetchpriority="high"
@@ -1068,7 +1115,7 @@
       </p>
       <div class="cta-actions">
         <a
-          href="https://apps.apple.com/app/jobguard/id0000000000"
+          href="https://apps.apple.com/us/app/jobguard/id6780220932"
           class="btn btn-primary"
           target="_blank"
         >
