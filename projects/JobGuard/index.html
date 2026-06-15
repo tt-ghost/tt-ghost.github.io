@@ -218,48 +218,119 @@
         margin-top: 72px;
         position: relative;
         z-index: 1;
-        max-width: 320px;
+        max-width: 280px;
         margin-left: auto;
         margin-right: auto;
       }
       .hero-mockup .phone-frame {
         width: 100%;
-        aspect-ratio: 9/16;
-        border-radius: 28px;
-        background: linear-gradient(145deg, #0a1414, #1a3030);
+        aspect-ratio: 1/2.16;
+        border-radius: 32px;
+        overflow: hidden;
         box-shadow:
-          0 24px 80px rgba(0, 0, 0, 0.15),
-          0 0 0 3px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10%;
+          0 24px 80px rgba(0, 0, 0, 0.18),
+          0 0 0 4px rgba(0, 0, 0, 0.1);
+        background: #000;
       }
-      .phone-frame .score-ring {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 5px solid var(--green);
+      .hero-mockup .phone-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ---- screenshots section ---- */
+      .screenshots {
+        padding: 0 0 100px;
+      }
+      .screenshots-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .screenshots-scroll {
         display: flex;
-        align-items: center;
+        gap: 32px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 0 32px;
+        scrollbar-width: none;
         justify-content: center;
+      }
+      .screenshots-scroll::-webkit-scrollbar {
+        display: none;
+      }
+      .screenshot-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        text-align: center;
+        width: 260px;
+      }
+      .screenshot-phone {
+        width: 100%;
+        aspect-ratio: 1/2.16;
+        border-radius: 32px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.05);
+        box-shadow:
+          0 16px 48px rgba(0, 0, 0, 0.12),
+          0 0 0 3px rgba(0, 0, 0, 0.06);
         margin-bottom: 16px;
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
       }
-      .phone-frame .score-num {
-        font-size: 2rem;
-        font-weight: 800;
-        color: #fff;
+      .screenshot-item:hover .screenshot-phone {
+        transform: translateY(-8px);
+        box-shadow:
+          0 28px 64px rgba(0, 0, 0, 0.2),
+          0 0 0 3px var(--accent);
       }
-      .phone-frame .score-label {
-        font-size: 0.7rem;
-        color: rgba(255, 255, 255, 0.5);
+      .screenshot-phone img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .screenshot-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .screenshot-sub {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+      .screenshots-hint {
+        text-align: center;
+        font-size: 0.78rem;
+        color: var(--text-muted);
         margin-top: 4px;
+        letter-spacing: 0.02em;
       }
-      .phone-frame .mini-text {
-        font-size: 0.65rem;
-        color: rgba(255, 255, 255, 0.3);
-        margin-top: 24px;
+
+      @media (max-width: 768px) {
+        .screenshots-scroll {
+          gap: 20px;
+          padding: 16px 20px 24px;
+        }
+        .screenshot-item {
+          width: 220px;
+        }
+        .hero-mockup {
+          max-width: 240px;
+          margin-top: 48px;
+        }
+      }
+      @media (max-width: 480px) {
+        .screenshot-item {
+          width: 200px;
+        }
+        .hero-mockup {
+          max-width: 200px;
+        }
       }
 
       .stats {
@@ -653,18 +724,12 @@
         </div>
         <div class="hero-mockup">
           <div class="phone-frame">
-            <div class="score-ring">
-              <div style="text-align: center">
-                <div class="score-num">86</div>
-                <div class="score-label">TRUST SCORE</div>
-              </div>
-            </div>
-            <div
-              style="color: var(--green); font-size: 0.8rem; font-weight: 700"
-            >
-              <i class="fa-solid fa-shield"></i> LOW RISK
-            </div>
-            <div class="mini-text">Analysis complete in 0.03s</div>
+            <img
+              src="https://cdn.ai-bar.cn/job-guard/snapshots/4-1.webp"
+              alt="JD Risk Analysis Screenshot"
+              loading="eager"
+              fetchpriority="high"
+            />
           </div>
         </div>
       </div>
@@ -789,6 +854,91 @@
               to verify the posting.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+      <div class="screenshots-inner">
+        <div class="section-tag">
+          <i class="fa-solid fa-mobile-screen"></i> App Screenshots
+        </div>
+        <h2 class="section-title">Five tabs, one mission</h2>
+        <p class="section-desc">
+          Everything you need to stay safe in your job search — all on-device,
+          all private.
+        </p>
+        <div class="screenshots-scroll">
+          <div class="screenshot-item">
+            <div class="screenshot-phone">
+              <img
+                src="https://cdn.ai-bar.cn/job-guard/snapshots/1-1.webp"
+                alt="Interview Calendar - Never Miss an Interview"
+                loading="lazy"
+              />
+            </div>
+            <div class="screenshot-label">Never Miss an Interview</div>
+            <div class="screenshot-sub">
+              Built-in calendar with interview tracking
+            </div>
+          </div>
+          <div class="screenshot-item">
+            <div class="screenshot-phone">
+              <img
+                src="https://cdn.ai-bar.cn/job-guard/snapshots/2-1.webp"
+                alt="Kanban-Style Application Board"
+                loading="lazy"
+              />
+            </div>
+            <div class="screenshot-label">Kanban-Style Application Board</div>
+            <div class="screenshot-sub">Drag stages: Applied → Offered</div>
+          </div>
+          <div class="screenshot-item">
+            <div class="screenshot-phone">
+              <img
+                src="https://cdn.ai-bar.cn/job-guard/snapshots/2-2.webp"
+                alt="Full Timeline & Risk Insights"
+                loading="lazy"
+              />
+            </div>
+            <div class="screenshot-label">
+              Full Timeline &amp; Risk Insights
+            </div>
+            <div class="screenshot-sub">
+              Every interview round tracked in detail
+            </div>
+          </div>
+          <div class="screenshot-item">
+            <div class="screenshot-phone">
+              <img
+                src="https://cdn.ai-bar.cn/job-guard/snapshots/3-1.webp"
+                alt="Rich Charts, Clear Insights"
+                loading="lazy"
+              />
+            </div>
+            <div class="screenshot-label">Rich Charts, Clear Insights</div>
+            <div class="screenshot-sub">
+              Funnel, trends, and salary distributions
+            </div>
+          </div>
+          <div class="screenshot-item">
+            <div class="screenshot-phone">
+              <img
+                src="https://cdn.ai-bar.cn/job-guard/snapshots/4-1.webp"
+                alt="One-Tap JD Risk Scan"
+                loading="lazy"
+              />
+            </div>
+            <div class="screenshot-label">One-Tap JD Risk Scan</div>
+            <div class="screenshot-sub">
+              75 anti-fraud rules in milliseconds
+            </div>
+          </div>
+        </div>
+        <div class="screenshots-hint">
+          <i class="fa-solid fa-arrows-left-right"></i> Scroll to explore all
+          screens
         </div>
       </div>
     </section>
