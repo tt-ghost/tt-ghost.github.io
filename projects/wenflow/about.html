@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="system">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>关于文流</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  :root {
+    --color-page: #faf6f0;
+    --color-surface: #fffef9;
+    --color-text: #3d3226;
+    --color-text-secondary: #8b7355;
+    --color-accent: #c75b39;
+    --color-border: #e8d9c5;
+  }
+  /* System dark mode — only active when data-theme="system" AND OS prefers dark */
+  @media (prefers-color-scheme: dark) {
+    html[data-theme="system"] {
+      --color-page: #2c2620;
+      --color-surface: #383028;
+      --color-text: #e8d9c5;
+      --color-text-secondary: #7a6a55;
+      --color-border: #5c4a36;
+    }
+  }
+  /* Forced dark — always dark regardless of OS setting */
+  html[data-theme="dark"] {
+    --color-page: #2c2620;
+    --color-surface: #383028;
+    --color-text: #e8d9c5;
+    --color-text-secondary: #7a6a55;
+    --color-border: #5c4a36;
+  }
+  /* Forced light — uses :root defaults */
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+    background: var(--color-page);
+    color: var(--color-text);
+    line-height: 1.8;
+    padding: 0 20px 48px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 40px 0 32px;
+  }
+  .app-icon {
+    width: 80px; height: 80px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #c75b39 0%, #d4844a 60%, #e8a87c 100%);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 28px rgba(199,91,57,0.28);
+  }
+  .app-icon i { font-size: 38px; color: #fffef9; }
+  .app-name {
+    font-family: Georgia, "Noto Serif SC", serif;
+    font-size: 26px; font-weight: 700;
+    color: var(--color-text);
+  }
+  .app-version {
+    font-size: 13px; color: var(--color-text-secondary);
+    margin-top: 4px;
+  }
+  .app-tagline {
+    font-size: 14px; color: var(--color-text-secondary);
+    margin-top: 10px; max-width: 280px; margin-left: auto; margin-right: auto;
+  }
+
+  .divider {
+    height: 1px; background: var(--color-border);
+    margin: 0 0 28px;
+  }
+
+  .section { margin-bottom: 28px; }
+  .section-title {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .section-title i { color: var(--color-accent); font-size: 13px; }
+
+  .feature-list {
+    list-style: none; display: flex; flex-direction: column; gap: 12px;
+  }
+  .feature-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: var(--color-surface); border-radius: 12px;
+    padding: 14px 16px; font-size: 14px;
+    border: 1px solid var(--color-border);
+  }
+  .feature-list li i {
+    color: var(--color-accent); font-size: 18px; width: 22px;
+    text-align: center; margin-top: 1px; flex-shrink: 0;
+  }
+  .feature-list li .desc strong {
+    display: block; color: var(--color-text); margin-bottom: 3px;
+  }
+  .feature-list li .desc span {
+    color: var(--color-text-secondary); font-size: 13px;
+  }
+
+  
+
+  .story-block {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px; padding: 16px 18px;
+    font-size: 14px; color: var(--color-text-secondary);
+    line-height: 1.9;
+  }
+  .story-block p { margin-bottom: 10px; }
+  .story-block p:last-child { margin-bottom: 0; }
+
+  .links { display: flex; flex-direction: column; gap: 2px; }
+  .links a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 16px; text-decoration: none;
+    color: var(--color-text); font-size: 14px;
+    background: var(--color-surface); border-radius: 12px;
+    border: 1px solid var(--color-border);
+    transition: background 0.15s;
+  }
+  .links a:active { background: var(--color-border); }
+  .links a i.fa-chevron-right { margin-left: auto; color: var(--color-text-secondary); font-size: 12px; }
+  .links a i.fa-lock, .links a i.fa-file-contract, .links a i.fa-envelope { color: var(--color-accent); width: 20px; text-align: center; }
+
+  .footer {
+    text-align: center; font-size: 11px;
+    color: var(--color-text-secondary);
+    padding-top: 28px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="app-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+  <div class="app-name">文流 Wenflow</div>
+  <div class="app-version">1.0.0</div>
+  <p class="app-tagline">专为公众号创作者打造的 AI 写作工作室</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="section-title"><i class="fa-solid fa-book-open"></i> 产品故事</div>
+  <div class="story-block">
+    <p>文流诞生于一个简单的观察：公众号创作者每天都在和文字打交道，但真正好用的移动端写作工具少之又少。要么编辑器过于简陋，要么 AI 功能需要跳转到各种网页和 App，创作流程支离破碎。</p>
+    <p>我们想做的是把 <strong>沉浸式写作体验</strong> 和 <strong>AI 辅助能力</strong> 无缝融合在一个 App 里。你可以在暖纸色调的编辑器中专注书写，需要时一键唤起 AI 帮你润色、改写、校对或生成标题——全程不需要离开键盘。</p>
+    <p>文流不依赖任何自有服务器。你的文章保存在你的设备上，AI 调用直接从你的设备发往你选择的模型服务商。我们相信，<strong>写作者的隐私不应该被妥协</strong>。</p>
+    <p>目前文流由独立开发者维护，持续迭代中。每一个功能都来自真实的写作场景——因为我们自己就是文流的用户。</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><i class="fa-solid fa-wand-magic-sparkles"></i> 核心功能</div>
+  <ul class="feature-list">
+    <li>
+      <i class="fa-solid fa-pen-to-square"></i>
+      <div class="desc">
+        <strong>暖纸编辑器</strong>
+        <span>温暖纸张色调搭配 Georgia 衬线字体，营造沉浸式书写氛围。支持富文本排版、图片插入与本地存储、表格、超链接、引用块、分割线、有序/无序列表。明暗模式自动切换，多款主题自由搭配。</span>
+      </div>
+    </li>
+    <li>
+      <i class="fa-solid fa-robot"></i>
+      <div class="desc">
+        <strong>AI 写作助手</strong>
+        <span>一键润色修正语法与表达、多风格改写（正式/口语/精简/丰富）、全文校对找出错别字与标点问题、智能标题生成。支持 DeepSeek、OpenAI、Gemini、智谱等多种模型，可在设置中自由配置和切换。</span>
+      </div>
+    </li>
+    <li>
+      <i class="fa-solid fa-lightbulb"></i>
+      <div class="desc">
+        <strong>灵感碎片</strong>
+        <span>随时捕捉稍纵即逝的想法。支持标签分类整理，可按时间筛选（今天/本周/全部），一键将灵感转为文章初稿，不错过任何创作火花。</span>
+      </div>
+    </li>
+    <li>
+      <i class="fa-solid fa-chart-line"></i>
+      <div class="desc">
+        <strong>写作统计</strong>
+        <span>总字数、今日字数、连续写作天数、各状态文章数量一目了然。月度写作趋势图、时段分布热力图、标签使用统计，量化你的创作习惯，看见自己的进步。</span>
+      </div>
+    </li>
+    <li>
+      <i class="fa-solid fa-palette"></i>
+      <div class="desc">
+        <strong>五款精选主题</strong>
+        <span>暖纸书房（默认温暖米白）、禅意极简（大量留白）、编辑部（黑白分明高信息密度）、新春红（节日暖红点缀）、科技蓝（冷色科技风）。每款主题均为写作场景精心调校。</span>
+      </div>
+    </li>
+    <li>
+      <i class="fa-solid fa-copy"></i>
+      <div class="desc">
+        <strong>公众号格式导出</strong>
+        <span>一键复制为公众号兼容的 HTML 格式，图片自动转为 base64 内嵌。粘贴到微信公众平台编辑器即可使用，格式和图片完整保留。</span>
+      </div>
+    </li>
+    <li>
+      <i class="fa-solid fa-shield-halved"></i>
+      <div class="desc">
+        <strong>隐私优先架构</strong>
+        <span>无需注册账号，无需登录。所有数据存储在设备本地数据库。API Key 使用 iOS Keychain 加密保存。AI 调用直接从设备发送至第三方 API，不经过任何中间服务器。</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="section">
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="section-title"><i class="fa-solid fa-link"></i> 相关链接</div>
+  <div class="links">
+    <a href="privacy.html">
+      <i class="fa-solid fa-lock"></i> 隐私政策
+      <i class="fa-solid fa-chevron-right"></i>
+    </a>
+    <a href="terms.html">
+      <i class="fa-solid fa-file-contract"></i> 服务条款
+      <i class="fa-solid fa-chevron-right"></i>
+    </a>
+    <a href="mailto:ttghost@126.com">
+      <i class="fa-solid fa-envelope"></i> 联系开发者
+      <i class="fa-solid fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Wenflow. All rights reserved.</p>
+  <p style="margin-top:6px;">Made with <i class="fa-solid fa-heart" style="color:var(--color-accent);"></i> for writers, by writers.</p>
+</div>
+
+<script>
+(function() {
+  var p = new URLSearchParams(window.location.search);
+  var theme = p.get('theme');
+  if (theme === 'light' || theme === 'dark' || theme === 'system') {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+})();
+</script>
+
+</body>
+</html>
+

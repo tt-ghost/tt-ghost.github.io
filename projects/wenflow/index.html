@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>文流 Wenflow — 公众号创作者的 AI 写作工作室</title>
+    <meta
+      name="description"
+      content="文流是一款专为公众号创作者打造的 iOS AI 写作助手。暖纸编辑器、AI 润色改写校对、灵感管理、写作统计，隐私优先的纯本地架构。"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --color-page: #faf6f0;
+        --color-surface: #fffef9;
+        --color-text: #3d3226;
+        --color-text-secondary: #8b7355;
+        --color-accent: #c75b39;
+        --color-accent-light: #d4844a;
+        --color-border: #e8d9c5;
+        --radius: 14px;
+        --shadow: 0 2px 16px rgba(61, 50, 38, 0.06);
+      }
+      @media (prefers-color-scheme: dark) {
+        html[data-theme="system"] {
+          --color-page: #2c2620;
+          --color-surface: #383028;
+          --color-text: #e8d9c5;
+          --color-text-secondary: #7a6a55;
+          --color-border: #5c4a36;
+          --shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+        }
+      }
+      html[data-theme="dark"] {
+        --color-page: #2c2620;
+        --color-surface: #383028;
+        --color-text: #e8d9c5;
+        --color-text-secondary: #7a6a55;
+        --color-border: #5c4a36;
+        --shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+        background: var(--color-page);
+        color: var(--color-text);
+        line-height: 1.7;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* ── Layout ── */
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      @media (min-width: 960px) {
+        .container {
+          max-width: 960px;
+          padding: 0 40px;
+        }
+      }
+
+      /* ── Hero ── */
+      .hero {
+        text-align: center;
+        padding: 64px 24px 48px;
+        position: relative;
+        overflow: hidden;
+      }
+      @media (min-width: 768px) {
+        .hero {
+          padding: 80px 24px 56px;
+        }
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 70% 50% at 50% 35%,
+          rgba(199, 91, 57, 0.06) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .hero-icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 24px;
+        background: linear-gradient(
+          145deg,
+          #c75b39 0%,
+          #d4844a 60%,
+          #e8a87c 100%
+        );
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 22px;
+        box-shadow: 0 8px 36px rgba(199, 91, 57, 0.3);
+        position: relative;
+      }
+      @media (min-width: 768px) {
+        .hero-icon {
+          width: 108px;
+          height: 108px;
+          border-radius: 26px;
+        }
+      }
+      .hero-icon i {
+        font-size: 44px;
+        color: #fffef9;
+      }
+      @media (min-width: 768px) {
+        .hero-icon i {
+          font-size: 50px;
+        }
+      }
+      .hero h1 {
+        font-family: Georgia, "Noto Serif SC", serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--color-text);
+        position: relative;
+      }
+      @media (min-width: 768px) {
+        .hero h1 {
+          font-size: 36px;
+        }
+      }
+      .hero h1 span {
+        color: var(--color-accent);
+      }
+      .hero .subtitle {
+        font-size: 15px;
+        color: var(--color-text-secondary);
+        margin-top: 12px;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      }
+      @media (min-width: 768px) {
+        .hero .subtitle {
+          font-size: 16px;
+          max-width: 440px;
+        }
+      }
+      .hero .badge-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        position: relative;
+      }
+      .hero .badge {
+        font-size: 12px;
+        padding: 6px 16px;
+        border-radius: 20px;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        color: var(--color-text-secondary);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .hero .badge i {
+        color: var(--color-accent);
+        font-size: 11px;
+      }
+      .hero .cta {
+        margin-top: 28px;
+        position: relative;
+      }
+      .hero .cta a {
+        display: inline-flex;
+        align-items: center;
+        padding: 13px 40px;
+        border-radius: 28px;
+        background: var(--color-accent);
+        color: #fffef9;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(199, 91, 57, 0.3);
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
+      .hero .cta a:hover {
+        box-shadow: 0 6px 28px rgba(199, 91, 57, 0.35);
+      }
+      .hero .cta a:active {
+        transform: scale(0.97);
+      }
+
+      /* ── Sections ── */
+      .section {
+        padding: 24px 0 52px;
+      }
+      @media (min-width: 768px) {
+        .section {
+          padding: 32px 0 64px;
+        }
+      }
+      .section-label {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--color-accent);
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      .section-title {
+        font-family: Georgia, "Noto Serif SC", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--color-text);
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      @media (min-width: 768px) {
+        .section-title {
+          font-size: 26px;
+        }
+      }
+      .section-desc {
+        font-size: 14px;
+        color: var(--color-text-secondary);
+        text-align: center;
+        margin-bottom: 32px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* ── Feature Grid ── */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      @media (min-width: 600px) {
+        .feature-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (min-width: 900px) {
+        .feature-grid {
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 18px;
+        }
+      }
+      .feature-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: 22px 20px;
+        box-shadow: var(--shadow);
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
+      .feature-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(61, 50, 38, 0.1);
+      }
+      .feature-card:active {
+        transform: translateY(1px);
+      }
+      .feature-card i {
+        font-size: 24px;
+        color: var(--color-accent);
+        display: block;
+        margin-bottom: 12px;
+      }
+      .feature-card h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 6px;
+      }
+      .feature-card p {
+        font-size: 13px;
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+      }
+
+      /* ── Workflow ── */
+      .workflow {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      @media (min-width: 640px) {
+        .workflow {
+          flex-direction: row;
+        }
+      }
+      .workflow-step {
+        flex: 1;
+        text-align: center;
+        padding: 20px 14px;
+        position: relative;
+      }
+      .workflow-step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 28px;
+        background: var(--color-border);
+      }
+      @media (min-width: 640px) {
+        .workflow-step:not(:last-child)::after {
+          bottom: auto;
+          top: 32px;
+          left: auto;
+          right: -2px;
+          width: 36px;
+          height: 2px;
+          transform: none;
+        }
+      }
+      .workflow-step .step-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        color: #fffef9;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .workflow-step h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 4px;
+      }
+      .workflow-step p {
+        font-size: 12px;
+        color: var(--color-text-secondary);
+      }
+
+      /* ── Plan Cards ── */
+      .plan-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        max-width: 780px;
+        margin: 0 auto;
+      }
+      @media (min-width: 600px) {
+        .plan-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .plan-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: 24px 20px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+      }
+      .plan-card.pro {
+        border-color: var(--color-accent);
+        box-shadow: 0 4px 28px rgba(199, 91, 57, 0.12);
+        order: -1;
+      }
+      @media (min-width: 600px) {
+        .plan-card.pro {
+          order: 0;
+          transform: scale(1.03);
+        }
+      }
+      .plan-card h3 {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--color-text);
+        margin-bottom: 4px;
+      }
+      .plan-card .plan-badge {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--color-accent);
+        background: rgba(199, 91, 57, 0.08);
+        padding: 3px 12px;
+        border-radius: 10px;
+        margin-bottom: 14px;
+      }
+      .plan-card ul {
+        list-style: none;
+        text-align: left;
+        margin: 0 0 auto;
+        flex: 1;
+      }
+      .plan-card ul li {
+        font-size: 13px;
+        color: var(--color-text-secondary);
+        padding: 6px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .plan-card ul li i {
+        color: var(--color-accent);
+        font-size: 12px;
+        width: 18px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .plan-card .plan-note {
+        font-size: 11px;
+        color: var(--color-text-secondary);
+        margin-top: 14px;
+      }
+
+      /* ── FAQ ── */
+      .faq-list {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .faq-item {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+        margin-bottom: 10px;
+        box-shadow: var(--shadow);
+      }
+      .faq-item h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 6px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .faq-item h4 i {
+        color: var(--color-accent);
+        font-size: 14px;
+        margin-top: 2px;
+        width: 18px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .faq-item p {
+        font-size: 13px;
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+        padding-left: 28px;
+      }
+
+      /* ── Quote ── */
+      .quote-block {
+        text-align: center;
+        padding: 40px 20px;
+      }
+      @media (min-width: 768px) {
+        .quote-block {
+          padding: 52px 20px;
+        }
+      }
+      .quote-block blockquote {
+        font-family: Georgia, "Noto Serif SC", serif;
+        font-size: 18px;
+        font-style: italic;
+        color: var(--color-text);
+        line-height: 1.9;
+        max-width: 480px;
+        margin: 0 auto 12px;
+      }
+      @media (min-width: 768px) {
+        .quote-block blockquote {
+          font-size: 20px;
+        }
+      }
+      .quote-block blockquote::before {
+        content: "\201C";
+      }
+      .quote-block blockquote::after {
+        content: "\201D";
+      }
+      .quote-block cite {
+        font-size: 13px;
+        color: var(--color-text-secondary);
+        font-style: normal;
+      }
+
+      /* ── Footer ── */
+      .site-footer {
+        background: var(--color-surface);
+        border-top: 1px solid var(--color-border);
+        padding: 28px 24px 36px;
+        text-align: center;
+      }
+      .site-footer .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+      .site-footer .footer-links a {
+        font-size: 13px;
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .site-footer .footer-links a:hover {
+        color: var(--color-accent);
+      }
+      .site-footer .footer-links a i {
+        color: var(--color-accent);
+        font-size: 11px;
+      }
+      .site-footer .footer-copy {
+        font-size: 11px;
+        color: var(--color-text-secondary);
+      }
+      .site-footer .footer-copy i {
+        color: var(--color-accent);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ════════════ Hero ════════════ -->
+    <header class="hero">
+      <div class="hero-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+      <h1>文流 <span>Wenflow</span></h1>
+      <p class="subtitle">
+        专为公众号创作者打造的 AI 写作工作室 &mdash; 暖纸编辑器、智能 AI
+        助手、隐私优先的纯本地架构。
+      </p>
+      <div class="badge-row">
+        <span class="badge"><i class="fa-brands fa-apple"></i> iOS 17+</span>
+        <span class="badge"
+          ><i class="fa-solid fa-shield-halved"></i> 纯本地 &middot;
+          无需注册</span
+        >
+        <span class="badge"><i class="fa-solid fa-robot"></i> 多模型 AI</span>
+      </div>
+      <div class="cta">
+        <a href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-app-store-ios" style="margin-right: 8px"></i>在
+          App Store 下载
+        </a>
+      </div>
+    </header>
+
+    <!-- ════════════ Features ════════════ -->
+    <div class="container">
+      <section class="section">
+        <div class="section-label">为什么选择文流</div>
+        <h2 class="section-title">一个 App，完整的创作流</h2>
+        <p class="section-desc">
+          从捕捉灵感到排版发布，文流覆盖公众号写作的每一个环节。
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <h3>暖纸编辑器</h3>
+            <p>
+              温暖纸张色调搭配 Georgia
+              衬线字体，营造沉浸式书写氛围。富文本排版、图片插入、表格、超链接、引用块、分割线、有序与无序列表。
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-robot"></i>
+            <h3>AI 写作助手</h3>
+            <p>
+              一键润色修正语法与表达；多风格改写（正式 / 口语 / 精简 /
+              丰富）；全文校对找出错别字与标点问题；智能标题生成。支持
+              DeepSeek、OpenAI、Gemini、智谱等多种模型自由切换。
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>灵感碎片</h3>
+            <p>
+              随时捕捉稍纵即逝的想法。支持标签分类，按时间筛选（今天 / 本周 /
+              全部），一键转为文章初稿。让每一个火花都成为好文章的开端。
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>写作统计</h3>
+            <p>
+              总字数、今日字数、连续写作天数一目了然。月度趋势图、时段热力图、标签使用统计，量化你的创作习惯，看见自己的进步轨迹。
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-palette"></i>
+            <h3>五款精选主题</h3>
+            <p>
+              暖纸书房、禅意极简、编辑部、新春红、科技蓝。每款主题为写作场景精心调校，支持明暗模式自动切换，自由搭配写作氛围。
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>隐私优先架构</h3>
+            <p>
+              无需注册账号，无需登录。所有数据存储在设备本地。API Key 使用 iOS
+              Keychain 加密。AI 调用直接从设备发送至第三方
+              API，不经过任何中间服务器。你的文章只属于你。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ Workflow ════════════ -->
+      <section class="section">
+        <div class="section-label">使用流程</div>
+        <h2 class="section-title">四步开始创作</h2>
+        <p class="section-desc">
+          从安装到发布，文流让公众号写作变得简单而高效。
+        </p>
+
+        <div class="workflow">
+          <div class="workflow-step">
+            <div class="step-num">1</div>
+            <h4>下载安装</h4>
+            <p>从 App Store 免费下载，无需注册即可使用核心功能。</p>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">2</div>
+            <h4>配置 AI</h4>
+            <p>在设置中添加模型服务商的 API Key，选择你偏好的模型。</p>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">3</div>
+            <h4>专注写作</h4>
+            <p>在暖纸编辑器中书写，随时唤起 AI 润色、改写或校对。</p>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">4</div>
+            <h4>一键导出</h4>
+            <p>复制为公众号格式，粘贴到微信公众平台，格式和图片完整保留。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ Plans ════════════ -->
+      <section class="section">
+        <div class="section-label">方案与定价</div>
+        <h2 class="section-title">从免费开始，按需升级</h2>
+        <p class="section-desc">具体价格以 App Store 内显示为准。</p>
+
+        <div class="plan-grid">
+          <div class="plan-card">
+            <h3>免费版</h3>
+            <p class="plan-badge">基础功能</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> 完整编辑器功能</li>
+              <li><i class="fa-solid fa-check"></i> 有限文章 &amp; 灵感</li>
+              <li><i class="fa-solid fa-check"></i> 每月基础 AI 额度</li>
+              <li><i class="fa-solid fa-check"></i> 3 款免费主题</li>
+            </ul>
+            <p class="plan-note">核心写作功能完全免费</p>
+          </div>
+
+          <div class="plan-card pro">
+            <h3>Pro 订阅</h3>
+            <p class="plan-badge">推荐</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> 无限文章 &amp; 灵感</li>
+              <li><i class="fa-solid fa-check"></i> 每月更多 AI 额度</li>
+              <li><i class="fa-solid fa-check"></i> 全部 5 款主题</li>
+              <li><i class="fa-solid fa-check"></i> 月度 / 年度可选</li>
+            </ul>
+            <p class="plan-note">自动续费，随时可取消</p>
+          </div>
+
+          <div class="plan-card">
+            <h3>AI 加油包</h3>
+            <p class="plan-badge">一次性购买</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> 额外 AI 调用次数</li>
+              <li><i class="fa-solid fa-check"></i> 用完即止</li>
+              <li><i class="fa-solid fa-check"></i> 可与 Pro 叠加</li>
+              <li><i class="fa-solid fa-check"></i> 按需灵活购买</li>
+            </ul>
+            <p class="plan-note">灵活补充 AI 用量</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ FAQ ════════════ -->
+      <section class="section">
+        <div class="section-label">常见问题</div>
+        <h2 class="section-title">你可能想了解的</h2>
+        <p class="section-desc">关于文流的使用、功能与付费的常见疑问。</p>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i> 文流是否需要注册账号？
+            </h4>
+            <p>
+              不需要。文流是一款纯本地应用，无需注册、无需登录，下载即可使用。你的所有数据仅保存在你的设备上。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i> AI
+              功能如何使用？需要付费吗？
+            </h4>
+            <p>
+              你需要在应用设置中添加 AI 服务商的 API Key（如 DeepSeek、OpenAI
+              等）。免费版每月有基础 AI 调用额度，超出后可升级 Pro
+              或购买加油包。API 调用费用由服务商直接收取，文流不收取额外费用。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i> 我的文章数据安全吗？
+            </h4>
+            <p>
+              非常安全。所有文章和灵感碎片都存储在你的设备本地 SQLite
+              数据库中，不会上传到任何服务器。API Key 使用 iOS Keychain
+              加密存储。AI 调用时的文本直接从你的设备通过 HTTPS 发送至第三方
+              API，文流无法访问。你可以随时导出或删除你的数据。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i> 支持的 AI 模型有哪些？
+            </h4>
+            <p>
+              文流支持所有兼容 OpenAI Chat Completions API 的服务商，内置了
+              DeepSeek、OpenAI、Google Gemini、智谱 AI
+              等常用服务商的配置模板，你也可以手动添加其他服务商或自部署模型。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i>
+              写好的文章如何发布到公众号？
+            </h4>
+            <p>
+              在编辑器中点击右上角菜单，选择"复制为公众号格式"，系统会将文章内容（包括排版和图片）以公众号兼容的
+              HTML
+              格式复制到剪贴板。打开微信公众平台编辑器粘贴即可，图片会自动转为
+              base64 内嵌格式。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i> Pro 订阅如何取消？
+            </h4>
+            <p>
+              Pro 订阅通过 Apple ID 管理。在 iOS 设备上进入"设置 &gt; Apple ID
+              &gt;
+              订阅"，找到文流即可取消自动续费。当期结束前取消，当期内仍可享受
+              Pro 权益。删除应用不会自动取消订阅，请通过上述路径手动操作。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i> 文流是否有 Android
+              版本？
+            </h4>
+            <p>
+              目前文流仅支持 iOS 17 及以上版本。我们专注于在 Apple
+              平台上提供最佳的写作体验。未来是否会推出 Android
+              版本取决于用户需求和开发资源。
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>
+              <i class="fa-solid fa-circle-question"></i> 如何备份我的文章？
+            </h4>
+            <p>
+              建议通过以下几种方式备份：1) 使用 iCloud
+              备份，文章数据会随设备备份一同保存；2) 通过 iTunes / Finder
+              将设备数据备份到电脑；3)
+              定期使用"复制为公众号格式"将重要文章导出到其他平台或本地文件。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ Quote ════════════ -->
+      <section class="quote-block">
+        <blockquote>
+          写作是思想的延伸。一个好的工具，应该让你忘记工具本身，专注于流淌的文字。
+        </blockquote>
+        <cite>&mdash; 文流的设计理念</cite>
+      </section>
+    </div>
+
+    <!-- ════════════ Footer ════════════ -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="about.html"
+          ><i class="fa-solid fa-circle-info"></i> 关于文流</a
+        >
+        <a href="privacy.html"><i class="fa-solid fa-lock"></i> 隐私政策</a>
+        <a href="terms.html"
+          ><i class="fa-solid fa-file-contract"></i> 服务条款</a
+        >
+        <a href="mailto:ttghost@126.com"
+          ><i class="fa-solid fa-envelope"></i> 邮箱</a
+        >
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 Wenflow. Made with <i class="fa-solid fa-heart"></i> for
+        writers, by writers.
+      </p>
+    </footer>
+
+    <script>
+      (function () {
+        var p = new URLSearchParams(window.location.search);
+        var theme = p.get("theme");
+        if (theme === "light" || theme === "dark" || theme === "system") {
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+      })();
+    </script>
+  </body>
+</html>

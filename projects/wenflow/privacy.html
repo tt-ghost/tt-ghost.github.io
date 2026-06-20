@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="system">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>隐私政策 - 文流</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  :root {
+    --color-page: #faf6f0;
+    --color-surface: #fffef9;
+    --color-text: #3d3226;
+    --color-text-secondary: #8b7355;
+    --color-accent: #c75b39;
+    --color-border: #e8d9c5;
+  }
+  @media (prefers-color-scheme: dark) {
+    html[data-theme="system"] {
+      --color-page: #2c2620;
+      --color-surface: #383028;
+      --color-text: #e8d9c5;
+      --color-text-secondary: #7a6a55;
+      --color-border: #5c4a36;
+    }
+  }
+  html[data-theme="dark"] {
+    --color-page: #2c2620;
+    --color-surface: #383028;
+    --color-text: #e8d9c5;
+    --color-text-secondary: #7a6a55;
+    --color-border: #5c4a36;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+    background: var(--color-page);
+    color: var(--color-text);
+    line-height: 1.8;
+    padding: 0 20px 48px;
+    -webkit-text-size-adjust: 100%;
+  }
+  .page-header {
+    padding: 36px 0 24px;
+    text-align: center;
+  }
+  .page-header i {
+    font-size: 36px; color: var(--color-accent);
+    display: block; margin-bottom: 14px;
+  }
+  .page-header h1 {
+    font-family: Georgia, "Noto Serif SC", serif;
+    font-size: 24px; font-weight: 700;
+    color: var(--color-text);
+  }
+  .page-header .update-date {
+    font-size: 12px; color: var(--color-text-secondary);
+    margin-top: 6px;
+  }
+  .divider {
+    height: 1px; background: var(--color-border);
+    margin: 0 0 28px;
+  }
+  .section { margin-bottom: 24px; }
+  .section h2 {
+    font-size: 16px; font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section h2 i {
+    color: var(--color-accent); font-size: 15px;
+    width: 22px; text-align: center;
+  }
+  .section h3 {
+    font-size: 14px; font-weight: 600;
+    color: var(--color-text);
+    margin: 14px 0 6px;
+  }
+  .section p {
+    font-size: 14px; color: var(--color-text-secondary);
+    margin-bottom: 8px;
+  }
+  .section ul {
+    list-style: none; padding-left: 30px;
+  }
+  .section ul li {
+    font-size: 14px; color: var(--color-text-secondary);
+    margin-bottom: 6px; position: relative;
+  }
+  .section ul li::before {
+    content: ""; position: absolute;
+    left: -20px; top: 10px;
+    width: 4px; height: 4px;
+    border-radius: 50%; background: var(--color-accent);
+  }
+  .emphasis-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px; padding: 16px 18px;
+    margin: 16px 0;
+  }
+  .emphasis-card p {
+    font-size: 14px; color: var(--color-text);
+    margin: 0; line-height: 1.8;
+  }
+  .emphasis-card i {
+    color: var(--color-accent); margin-right: 6px;
+  }
+  .footer {
+    text-align: center; font-size: 11px;
+    color: var(--color-text-secondary);
+    padding-top: 28px;
+  }
+  .footer a {
+    color: var(--color-accent); text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <i class="fa-solid fa-lock"></i>
+  <h1>隐私政策</h1>
+  <p class="update-date">更新日期：2026 年 6 月 20 日</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <p>文流（以下简称"我们"）深知隐私对您的重要性。本隐私政策旨在清晰、透明地说明我们如何收集、使用和保护您的信息。请仔细阅读。</p>
+</div>
+
+<div class="emphasis-card">
+  <p><i class="fa-solid fa-circle-info"></i> <strong>核心承诺：文流是一款纯本地应用。</strong>我们不依赖任何自有服务器，不要求注册账号，不需要登录。您的所有文章内容、灵感碎片、写作数据和偏好设置仅存储在您的设备上。我们无法访问、收集或查看您的任何内容。</p>
+</div>
+
+<div class="section">
+  <h2><i class="fa-solid fa-database"></i> 我们收集什么信息</h2>
+  <p>文流在设计上遵循数据最小化原则。以下是应用涉及的所有数据类型及其处理方式：</p>
+
+  <h3>本地存储数据</h3>
+  <ul>
+    <li><strong>文章内容与版本历史</strong> — 存储在设备本地 SQLite 数据库（GRDB）中，不会上传至任何服务器。</li>
+    <li><strong>灵感碎片与标签</strong> — 同样存储于本地数据库，您可以随时查看、编辑或删除。</li>
+    <li><strong>写作统计数据</strong> — 字数、连续写作天数、时段分布等统计均基于本地数据计算。</li>
+    <li><strong>主题偏好与应用设置</strong> — 存储于本地 UserDefaults 和本地数据库。</li>
+  </ul>
+
+  <h3>Apple 支付数据</h3>
+  <ul>
+    <li>当您购买 AI 加油包或订阅 Pro 时，整个支付流程由 Apple 通过 StoreKit 2 处理。</li>
+    <li>我们无法访问您的信用卡号、账单地址或其他支付详情。</li>
+    <li>我们仅接收匿名的交易状态通知以验证您的订阅权限。交易记录由 Apple 管理，受 <a href="https://www.apple.com/legal/privacy/" style="color:var(--color-accent);">Apple 隐私政策</a> 约束。</li>
+  </ul>
+
+  <h3>AI 调用数据</h3>
+  <ul>
+    <li>当您使用润色、改写、校对或标题生成功能时，编辑器中的文本会通过 HTTPS 加密传输至您配置的第三方 AI 服务商。</li>
+    <li>这些请求从您的设备直接发送，不经过文流的任何服务器。</li>
+    <li>您在设置中填写的 API Key 存储于 iOS Keychain 安全区域，与设备锁屏密码关联。</li>
+    <li>各 AI 服务商对您发送的数据有其独立的隐私政策。建议您查阅所使用服务商的隐私条款（如 <a href="https://openai.com/policies/privacy-policy" style="color:var(--color-accent);">OpenAI</a>、<a href="https://www.deepseek.com/legal/privacy" style="color:var(--color-accent);">DeepSeek</a> 等）。</li>
+  </ul>
+
+  <h3>诊断与崩溃数据</h3>
+  <ul>
+    <li>iOS 系统可能自动收集崩溃日志和性能数据，受 Apple 隐私政策约束。</li>
+    <li>您可以在 iOS 设置中关闭"共享 iPhone 分析"（设置 &gt; 隐私与安全性 &gt; 分析与改进）。</li>
+    <li>文流不集成任何第三方分析 SDK（如 Firebase、友盟等）。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fa-solid fa-ban"></i> 我们不收集什么</h2>
+  <ul>
+    <li>我们不收集您的姓名、邮箱、手机号或其他个人身份信息。</li>
+    <li>我们不使用 Cookies 或任何追踪技术。</li>
+    <li>我们不在应用中展示第三方广告，因此不存在广告追踪。</li>
+    <li>我们不对您的写作内容进行任何形式的分析、挖掘或训练。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fa-solid fa-shield-halved"></i> 数据安全</h2>
+  <ul>
+    <li><strong>应用沙盒隔离：</strong>所有本地数据存储于 iOS 应用沙盒内，其他应用无法访问。</li>
+    <li><strong>Keychain 加密：</strong>API Key 使用 iOS Keychain 服务加密存储，加密级别与设备锁屏密码关联。</li>
+    <li><strong>HTTPS 传输：</strong>AI 调用使用 HTTPS 加密传输，防止中间人攻击。</li>
+    <li><strong>网络权限最小化：</strong>应用仅在进行 AI 调用时使用网络。您可以在系统设置中随时关闭文流的网络权限，基础写作功能不受影响。</li>
+    <li><strong>无第三方 SDK：</strong>文流不集成任何第三方分析、广告或追踪 SDK。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fa-solid fa-user"></i> 您的权利</h2>
+  <ul>
+    <li><strong>访问与编辑：</strong>您可以随时在应用内查看、编辑或删除您的任意文章和灵感碎片。</li>
+    <li><strong>数据删除：</strong>卸载文流将彻底删除所有本地存储的数据（包括文章、灵感和设置），此操作不可逆。如需保留内容，请在卸载前使用"复制为公众号格式"或其他方式导出。</li>
+    <li><strong>订阅管理：</strong>您可以随时在 Apple ID 订阅管理页面取消 Pro 订阅或查看订阅状态。</li>
+    <li><strong>撤销网络权限：</strong>您可在系统设置中关闭文流的无线数据与 WLAN 权限，应用仍可正常使用离线写作功能。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fa-solid fa-child"></i> 儿童隐私</h2>
+  <p>文流在 App Store 的年龄分级为 4+。由于应用不收集任何个人身份信息（无需注册账号、无需提供姓名或联系方式），各年龄段用户均可安全使用。应用内购买（Pro 订阅 / AI 加油包）通过 Apple 的家庭共享和购买前询问功能提供家长管控。</p>
+</div>
+
+<div class="section">
+  <h2><i class="fa-solid fa-rotate"></i> 政策更新</h2>
+  <p>我们可能会不时更新本隐私政策。重大变更将在应用内或更新时通知。建议您定期查阅本页面以了解最新版本。</p>
+</div>
+
+<div class="section">
+  <h2><i class="fa-solid fa-envelope"></i> 联系我们</h2>
+  <p>如您对本隐私政策有任何疑问、意见或请求，请通过以下方式联系我们：<a href="mailto:ttghost@126.com" style="color:var(--color-accent);">邮箱</a></p>
+  <p style="font-size:13px;color:var(--color-text-secondary);">我们会在 7 个工作日内回复您的邮件。</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="footer">
+  <p><a href="about.html">关于文流</a> &middot; <a href="terms.html">服务条款</a></p>
+  <p style="margin-top:6px;">&copy; 2026 Wenflow</p>
+</div>
+
+<script>
+(function() {
+  var p = new URLSearchParams(window.location.search);
+  var theme = p.get('theme');
+  if (theme === 'light' || theme === 'dark' || theme === 'system') {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+})();
+</script>
+
+</body>
+</html>
