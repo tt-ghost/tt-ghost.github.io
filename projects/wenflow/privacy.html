@@ -36,49 +36,84 @@
     background: var(--color-page);
     color: var(--color-text);
     line-height: 1.8;
-    padding: 0 20px 48px;
+    padding: 0 20px 56px;
     -webkit-text-size-adjust: 100%;
   }
+  .container { max-width: 720px; margin: 0 auto; }
+  @media (min-width: 860px) {
+    .container { max-width: 760px; }
+    body { padding: 0 32px 64px; }
+  }
   .page-header {
-    padding: 36px 0 24px;
+    padding: 40px 0 24px;
     text-align: center;
+  }
+  @media (min-width: 860px) {
+    .page-header { padding: 52px 0 28px; }
   }
   .page-header i {
     font-size: 36px; color: var(--color-accent);
     display: block; margin-bottom: 14px;
+  }
+  @media (min-width: 860px) {
+    .page-header i { font-size: 40px; }
   }
   .page-header h1 {
     font-family: Georgia, "Noto Serif SC", serif;
     font-size: 24px; font-weight: 700;
     color: var(--color-text);
   }
+  @media (min-width: 860px) {
+    .page-header h1 { font-size: 28px; }
+  }
   .page-header .update-date {
     font-size: 12px; color: var(--color-text-secondary);
     margin-top: 6px;
+  }
+  @media (min-width: 860px) {
+    .page-header .update-date { font-size: 13px; }
   }
   .divider {
     height: 1px; background: var(--color-border);
     margin: 0 0 28px;
   }
+  @media (min-width: 860px) {
+    .divider { margin: 0 0 36px; }
+  }
   .section { margin-bottom: 24px; }
+  @media (min-width: 860px) {
+    .section { margin-bottom: 32px; }
+  }
   .section h2 {
     font-size: 16px; font-weight: 600;
     color: var(--color-text);
     margin-bottom: 10px;
     display: flex; align-items: center; gap: 8px;
   }
+  @media (min-width: 860px) {
+    .section h2 { font-size: 18px; }
+  }
   .section h2 i {
     color: var(--color-accent); font-size: 15px;
     width: 22px; text-align: center;
+  }
+  @media (min-width: 860px) {
+    .section h2 i { font-size: 16px; }
   }
   .section h3 {
     font-size: 14px; font-weight: 600;
     color: var(--color-text);
     margin: 14px 0 6px;
   }
+  @media (min-width: 860px) {
+    .section h3 { font-size: 15px; }
+  }
   .section p {
     font-size: 14px; color: var(--color-text-secondary);
     margin-bottom: 8px;
+  }
+  @media (min-width: 860px) {
+    .section p { font-size: 15px; }
   }
   .section ul {
     list-style: none; padding-left: 30px;
@@ -86,6 +121,9 @@
   .section ul li {
     font-size: 14px; color: var(--color-text-secondary);
     margin-bottom: 6px; position: relative;
+  }
+  @media (min-width: 860px) {
+    .section ul li { font-size: 15px; }
   }
   .section ul li::before {
     content: ""; position: absolute;
@@ -99,9 +137,15 @@
     border-radius: 12px; padding: 16px 18px;
     margin: 16px 0;
   }
+  @media (min-width: 860px) {
+    .emphasis-card { padding: 20px 24px; }
+  }
   .emphasis-card p {
     font-size: 14px; color: var(--color-text);
     margin: 0; line-height: 1.8;
+  }
+  @media (min-width: 860px) {
+    .emphasis-card p { font-size: 15px; }
   }
   .emphasis-card i {
     color: var(--color-accent); margin-right: 6px;
@@ -111,12 +155,16 @@
     color: var(--color-text-secondary);
     padding-top: 28px;
   }
+  @media (min-width: 860px) {
+    .footer { font-size: 12px; padding-top: 36px; }
+  }
   .footer a {
     color: var(--color-accent); text-decoration: none;
   }
 </style>
 </head>
 <body>
+<div class="container">
 
 <div class="page-header">
   <i class="fa-solid fa-lock"></i>
@@ -223,6 +271,8 @@
   <p style="margin-top:6px;">&copy; 2026 Wenflow</p>
 </div>
 
+</div>
+
 <script>
 (function() {
   var p = new URLSearchParams(window.location.search);
@@ -232,6 +282,5 @@
   }
 })();
 </script>
-
 </body>
 </html>
