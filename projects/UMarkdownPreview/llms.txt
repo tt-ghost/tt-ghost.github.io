@@ -1,0 +1,10 @@
+# UMarkdownPreview
+
+> A quiet, native Markdown reader and focus editor for macOS. Black-gold design, twelve theme options, folder workspaces, math and diagrams, and copy-as-inline-styles for WeChat.
+
+UMarkdownPreview 2.0 is available on the Mac App Store. It requires macOS 12.4 or later and is a one-time purchase. All rendering happens on-device; the app has no accounts, analytics, or tracking.
+
+- [Mac App Store](https://apps.apple.com/app/id6761372363)
+- [Support](https://github.com/tt-ghost/UMarkdownPreview/issues)
+- [Privacy Policy](https://github.com/tt-ghost/UMarkdownPreview/blob/master/PRIVACY.md)
+- [Source / product home](https://tt-ghost.github.io/projects/UMarkdownPreview/)
