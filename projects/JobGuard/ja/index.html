@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JobGuard — 求人票リスク診断と応募管理アプリ</title>
+    <meta
+      name="description"
+      content="JobGuardは求職者向けのスマートツール。内蔵ルールが求人票を端末内で分析し、信頼スコアとリスクレポートを即座に作成。応募管理・面接カレンダー・レポート分析も。オフライン動作、データ送信なし。"
+    />
+    <meta
+      name="keywords"
+      content="求人票 分析,求人 リスク診断,求職 詐欺 チェック,応募管理,面接カレンダー,求職活動 アプリ,転職 管理,iOS,プライバシー"
+    />
+    <meta name="author" content="JobGuard" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#01a7a8" />
+    <meta name="apple-itunes-app" content="app-id=6780220932" />
+    <link
+      rel="canonical"
+      href="https://tt-ghost.github.io/projects/JobGuard/ja/"
+    />
+
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://tt-ghost.github.io/projects/JobGuard/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="https://tt-ghost.github.io/projects/JobGuard/zh/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ja"
+      href="https://tt-ghost.github.io/projects/JobGuard/ja/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tt-ghost.github.io/projects/JobGuard/"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JobGuard" />
+    <meta
+      property="og:title"
+      content="JobGuard — 求人票リスク診断と応募管理アプリ"
+    />
+    <meta
+      property="og:description"
+      content="内蔵ルールが求人票を端末内で分析し、信頼スコアとリスクレポートを即座に作成。応募管理・面接カレンダー・レポート分析も。すべてオフライン、データ送信なし。"
+    />
+    <meta
+      property="og:url"
+      content="https://tt-ghost.github.io/projects/JobGuard/ja/"
+    />
+    <meta
+      property="og:image"
+      content="https://tt-ghost.github.io/projects/JobGuard/assets/og-ja.webp"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="JobGuard — iPhoneで求人票のリスクを分析し、応募を管理"
+    />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="JobGuard — 求人票リスク診断と応募管理アプリ"
+    />
+    <meta
+      name="twitter:description"
+      content="内蔵ルールで求人票を端末内分析。信頼スコアとリスクレポートを即座に作成し、応募管理・面接カレンダーも一つに。データは端末の外に出ません。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://tt-ghost.github.io/projects/JobGuard/assets/og-ja.webp"
+    />
+
+    <link rel="icon" href="../assets/logo_200.webp" type="image/webp" />
+    <link rel="apple-touch-icon" href="../assets/logo_600.webp" />
+    <link rel="preconnect" href="https://cdn.ai-bar.cn" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="stylesheet" href="../assets/reset.min.css" />
+    <link rel="stylesheet" href="../assets/site.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "JobGuard",
+        "alternateName": "JobGuard 求職アシスタント",
+        "url": "https://tt-ghost.github.io/projects/JobGuard/ja/",
+        "image": "https://tt-ghost.github.io/projects/JobGuard/assets/logo_600.webp",
+        "description": "JobGuardは求職者向けのスマートツールです。内蔵ルールが端末内で求人票を分析し、リスクの特定・応募進捗の管理・面接の調整・データレポート作成を支援します。すべてオフラインで動作し、データは送信されません。",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS",
+        "inLanguage": "ja",
+        "downloadUrl": "https://apps.apple.com/app/id6780220932",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "求人票のリスク分析と信頼スコア",
+          "応募カンバン管理",
+          "面接カレンダーとリマインダー",
+          "高度なレポートとCSVエクスポート",
+          "ホーム画面ウィジェット",
+          "100%端末内処理"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">メインコンテンツへ</a>
+
+    <header class="site-nav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">
+          <img
+            src="../assets/logo_360.webp"
+            alt="JobGuard ロゴ"
+            width="32"
+            height="32"
+          /><span>JobGuard</span>
+        </a>
+        <div class="nav-right">
+          <nav class="nav-links" aria-label="メインナビゲーション">
+            <a href="#features">機能</a>
+            <a href="#screenshots">スクリーンショット</a>
+            <a href="#how">使い方</a>
+            <a href="#privacy">プライバシー</a>
+          </nav>
+          <div class="lang-switch" role="group" aria-label="言語">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <a href="../index.html" hreflang="en" lang="en">EN</a>
+            <a href="../zh/index.html" hreflang="zh-Hans" lang="zh-CN">中文</a>
+            <a href="index.html" hreflang="ja" lang="ja" aria-current="page"
+              >日本語</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            100%端末内処理 &middot; アップロードなし &middot; プライバシー最優先
+          </div>
+          <h1>
+            その求人、<br /><span class="shield">安心して応募できますか？</span>
+          </h1>
+          <p class="hero-sub">
+            JobGuardは求職者向けのスマートツールです。内蔵ルールがiPhone上で求人票を分析し、信頼スコア・リスクレポート・根拠・確認すべき質問を即座に提示。リスクを見極め、応募を管理し、より賢い判断へ。
+          </p>
+          <div class="hero-actions">
+            <a
+              href="https://apps.apple.com/app/id6780220932"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-brands fa-apple" aria-hidden="true"></i> App Store
+              でダウンロード
+            </a>
+            <a href="#features" class="btn btn-outline">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i> 機能を見る
+            </a>
+          </div>
+          <div class="hero-mockup">
+            <div class="phone-frame">
+              <img
+                src="https://cdn.ai-bar.cn/job-guard/snapshots/3-1.webp"
+                alt="JobGuard アプリ画面：応募ファネルと面接分析レポート"
+                width="642"
+                height="1389"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="stats">
+        <div class="stats-inner">
+          <div>
+            <div class="stat-icon">
+              <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            </div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">端末内処理</div>
+          </div>
+          <div>
+            <div class="stat-icon">
+              <i class="fa-solid fa-language" aria-hidden="true"></i>
+            </div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">言語対応：日本語 / EN / 中文</div>
+          </div>
+          <div>
+            <div class="stat-icon">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            </div>
+            <div class="stat-num">0</div>
+            <div class="stat-label">アップロードされるデータ量</div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="section-inner">
+          <div class="section-tag">
+            <i class="fa-solid fa-star" aria-hidden="true"></i> 主な機能
+          </div>
+          <h2 class="section-title" id="features-title">
+            分析だけでなく、求職活動全体をサポート
+          </h2>
+          <p class="section-desc">
+            求人票を見つけてから内定まで、JobGuardがリスクの見極めと進捗管理を支えます。
+          </p>
+          <div class="features-grid">
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(1, 167, 168, 0.1); color: var(--accent)"
+              >
+                <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+              </div>
+              <h3>求人票リスク分析</h3>
+              <p>
+                求人情報を貼り付けるかOCRで読み取り。近接性・矛盾・頻出表現・構造異常などの内蔵ルールで分析し、根拠付きの信頼スコアとリスクレポートを生成します。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(3, 132, 252, 0.1); color: #0384fc"
+              >
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+              </div>
+              <h3>応募カンバン</h3>
+              <p>
+                応募を「応募済み・連絡済み・面接中・内定」のステージで管理。ステータス・日付・キーワードで絞り込み、スワイプで編集・削除できます（確認ダイアログ付き）。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(230, 138, 46, 0.1); color: var(--amber)"
+              >
+                <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+              </div>
+              <h3>面接カレンダー</h3>
+              <p>
+                月表示カレンダーで面接を管理。応募情報との紐付けも、単独での登録も可能。ラウンド・形式・場所・結果をすべて記録できます。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(155, 77, 202, 0.1); color: #9b4dca"
+              >
+                <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+              </div>
+              <h3>詳細レポート <span class="pro-tag">PRO</span></h3>
+              <p>
+                応募ファネル、面接通過率の推移、チャネル別比較、給与分布。データから盲点を見つけ、応募戦略を最適化します。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(45, 157, 74, 0.1); color: var(--green)"
+              >
+                <i class="fa-solid fa-widget" aria-hidden="true"></i>
+              </div>
+              <h3>ホーム画面ウィジェット</h3>
+              <p>
+                今日の面接件数と次の面接予定を、アプリを開かずに確認。小・中サイズのウィジェットに対応しています。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(224, 58, 58, 0.1); color: var(--red)"
+              >
+                <i class="fa-solid fa-file-shield" aria-hidden="true"></i>
+              </div>
+              <h3>リスクレポートと確認質問</h3>
+              <p>
+                検出された各ルールには原文の根拠箇所と位置を表示。人事に確認すべき質問も自動で生成します。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="screenshots" id="screenshots" aria-labelledby="screenshots-title">
+        <div class="screenshots-inner">
+          <div class="section-tag">
+            <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+            アプリのスクリーンショット
+          </div>
+          <h2 class="section-title" id="screenshots-title">
+            5つのタブ、ひとつの目的
+          </h2>
+          <p class="section-desc">
+            求職を安全に進めるために必要なすべてを、端末内で。データは外に出ません。
+          </p>
+          <div
+            class="screenshots-scroll"
+            role="region"
+            aria-label="JobGuard アプリのスクリーンショット"
+            tabindex="0"
+          >
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/1-1.webp"
+                  alt="面接カレンダーと今後の面接予定"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">面接を逃さない</div>
+                <div class="screenshot-sub">内蔵カレンダーで面接予定を管理</div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/2-1.webp"
+                  alt="ステージ別に整理された応募カンバン"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">カンバン式の応募管理</div>
+                <div class="screenshot-sub">
+                  カードを動かして「応募済み→内定」まで
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/2-2.webp"
+                  alt="応募タイムラインと面接ラウンド、リスクの洞察"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">タイムラインとリスクの全体像</div>
+                <div class="screenshot-sub">すべての面接ラウンドを記録</div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/3-1.webp"
+                  alt="応募ファネルと給与分布などのデータレポート"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">豊富なチャートで明快に</div>
+                <div class="screenshot-sub">ファネル・推移・給与分布</div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/4-1.webp"
+                  alt="求人票のリスクスキャンと信頼スコア"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">ワンタップでJDリスク診断</div>
+                <div class="screenshot-sub">内蔵ルールがミリ秒で分析</div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="screenshots-hint">
+            <i class="fa-solid fa-arrows-left-right" aria-hidden="true"></i>
+            左右にスクロールしてすべての画面を表示
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how" aria-labelledby="how-title">
+        <div class="section-inner">
+          <div class="section-tag">
+            <i
+              class="fa-solid fa-arrow-right-arrow-left"
+              aria-hidden="true"
+            ></i>
+            使い方
+          </div>
+          <h2 class="section-title" id="how-title">
+            求人票から応募判断まで、4つのステップ
+          </h2>
+          <p class="section-desc">
+            すべて端末内で完結。アカウント不要、インターネット接続も不要です。
+          </p>
+          <ol class="flow">
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-paste" aria-hidden="true"></i>
+              </div>
+              <h3>貼り付け・撮影</h3>
+              <p>求人テキストを貼り付けるか撮影。OCRが自動で抽出します</p>
+            </li>
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+              </div>
+              <h3>分析</h3>
+              <p>内蔵ルールが端末内でミリ秒単位に評価し、信頼スコアを算出</p>
+            </li>
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              </div>
+              <h3>確認</h3>
+              <p>該当ルール、矛盾点、原文の根拠、確認質問をチェック</p>
+            </li>
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-folder-plus" aria-hidden="true"></i>
+              </div>
+              <h3>管理</h3>
+              <p>応募カンバンに追加して、面接プロセスまで一元管理</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="risk-title">
+        <div class="section-inner">
+          <div class="section-tag">
+            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+            リスクレベル
+          </div>
+          <h2 class="section-title" id="risk-title">3段階のリスクを、ひと目で</h2>
+          <p class="section-desc">
+            信頼スコアは0〜100。検出された各ルールには4段階の重要度を表示します。
+          </p>
+          <div class="risk-showcase">
+            <div class="risk-card">
+              <div class="risk-badge low">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                低リスク &middot; 71-100
+              </div>
+              <p>
+                明らかな危険信号は検出されませんでした。比較的透明性の高い求人です。通常の注意で進めましょう。
+              </p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-badge medium">
+                <i
+                  class="fa-solid fa-circle-exclamation"
+                  aria-hidden="true"
+                ></i>
+                中リスク &middot; 41-70
+              </div>
+              <p>
+                不審な兆候があります。確認質問を参考に、応募前に雇用主へ重要事項を確認してください。
+              </p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-badge high">
+                <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                高リスク &middot; 0-40
+              </div>
+              <p>
+                重大または複数の詐欺の兆候を検出。応募や連絡の前に徹底した確認を強くおすすめします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="privacy" aria-labelledby="privacy-title">
+        <div class="section-inner">
+          <div class="privacy-banner">
+            <div class="shield-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h2 id="privacy-title">あなたの応募データは、端末の外に出ません</h2>
+            <p>
+              分析はすべて端末内で実行。アカウント登録もサーバー送信も、サードパーティによる追跡もありません。アプリを削除すれば、データは完全に消去されます。
+            </p>
+            <div class="privacy-badges">
+              <div class="privacy-badge">
+                <i class="fa-solid fa-wifi-slash" aria-hidden="true"></i>
+                オフライン動作
+              </div>
+              <div class="privacy-badge">
+                <i class="fa-solid fa-user-lock" aria-hidden="true"></i>
+                登録不要
+              </div>
+              <div class="privacy-badge">
+                <i class="fa-solid fa-eye-slash" aria-hidden="true"></i>
+                トラッキングなし
+              </div>
+              <div class="privacy-badge">
+                <i class="fa-solid fa-database" aria-hidden="true"></i>
+                ローカルCore Data
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">より安全な求職を、今すぐ</h2>
+        <p>
+          無料ダウンロード——1日1回の分析。Proは買い切りの一度のお支払いで、永久にご利用いただけます。
+        </p>
+        <div class="cta-actions">
+          <a
+            href="https://apps.apple.com/app/id6780220932"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-apple" aria-hidden="true"></i> App Store
+            でダウンロード
+          </a>
+          <a href="about.html" class="btn btn-outline">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            JobGuardについて
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <nav class="footer-links" aria-label="フッターナビゲーション">
+          <a href="about.html">JobGuardについて</a>
+          <a href="privacy.html">プライバシー</a>
+          <a href="terms.html">利用規約</a>
+          <a
+            class="email-link"
+            href="mailto:ttghost@126.com?subject=JobGuard%20-%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B"
+            aria-label="メールでJobGuardに問い合わせる"
+            title="メールでJobGuardに問い合わせる"
+          >
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span class="visually-hidden">メールでJobGuardに問い合わせる</span>
+          </a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 JobGuard. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

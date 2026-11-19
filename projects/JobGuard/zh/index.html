@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JobGuard — 求职风险识别与投递管理助手</title>
+    <meta
+      name="description"
+      content="JobGuard 是一款专为求职者打造的智能工具：内置规则在 iPhone 本地分析招聘 JD，秒出信任评分与风险报告；看板管理投递、日历安排面试、图表复盘求职数据。全程离线，数据不上传。"
+    />
+    <meta
+      name="keywords"
+      content="求职防骗,招聘骗局识别,JD分析,招聘风险,投递管理,求职看板,面试日历,求职报告,求职App,iOS,隐私保护"
+    />
+    <meta name="author" content="JobGuard" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#01a7a8" />
+    <meta name="apple-itunes-app" content="app-id=6780220932" />
+    <link
+      rel="canonical"
+      href="https://tt-ghost.github.io/projects/JobGuard/zh/"
+    />
+
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://tt-ghost.github.io/projects/JobGuard/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="https://tt-ghost.github.io/projects/JobGuard/zh/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ja"
+      href="https://tt-ghost.github.io/projects/JobGuard/ja/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tt-ghost.github.io/projects/JobGuard/"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JobGuard" />
+    <meta
+      property="og:title"
+      content="JobGuard — 求职风险识别与投递管理助手"
+    />
+    <meta
+      property="og:description"
+      content="内置规则本地分析招聘 JD，秒出信任评分与风险报告。看板管理投递、日历安排面试、图表复盘数据——全程离线，数据不上传。"
+    />
+    <meta
+      property="og:url"
+      content="https://tt-ghost.github.io/projects/JobGuard/zh/"
+    />
+    <meta
+      property="og:image"
+      content="https://tt-ghost.github.io/projects/JobGuard/assets/og-zh.webp"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="JobGuard——在 iPhone 上分析招聘 JD 风险并管理投递进度"
+    />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="JobGuard — 求职风险识别与投递管理助手"
+    />
+    <meta
+      name="twitter:description"
+      content="内置规则本地分析招聘 JD，识别招聘骗局；看板管理投递、日历安排面试、图表复盘求职数据。数据永不上传。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://tt-ghost.github.io/projects/JobGuard/assets/og-zh.webp"
+    />
+
+    <link rel="icon" href="../assets/logo_200.webp" type="image/webp" />
+    <link rel="apple-touch-icon" href="../assets/logo_600.webp" />
+    <link rel="preconnect" href="https://cdn.ai-bar.cn" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="stylesheet" href="../assets/reset.min.css" />
+    <link rel="stylesheet" href="../assets/site.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "JobGuard",
+        "alternateName": "JobGuard 求职助手",
+        "url": "https://tt-ghost.github.io/projects/JobGuard/zh/",
+        "image": "https://tt-ghost.github.io/projects/JobGuard/assets/logo_600.webp",
+        "description": "JobGuard 是一款专为求职者打造的智能工具：内置规则在设备本地分析招聘 JD，识别风险、管理投递进度、安排面试并生成数据报告，全程离线，数据不上传。",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS",
+        "inLanguage": "zh-Hans",
+        "downloadUrl": "https://apps.apple.com/app/id6780220932",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "招聘 JD 风险分析与信任评分",
+          "投递看板追踪",
+          "面试日历与提醒",
+          "高级数据报告与 CSV 导出",
+          "主屏幕小组件",
+          "100% 本地处理"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-nav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">
+          <img
+            src="../assets/logo_360.webp"
+            alt="JobGuard 标志"
+            width="32"
+            height="32"
+          /><span>JobGuard</span>
+        </a>
+        <div class="nav-right">
+          <nav class="nav-links" aria-label="主导航">
+            <a href="#features">功能</a>
+            <a href="#screenshots">截图</a>
+            <a href="#how">使用流程</a>
+            <a href="#privacy">隐私</a>
+          </nav>
+          <div class="lang-switch" role="group" aria-label="切换语言">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <a href="../index.html" hreflang="en" lang="en">EN</a>
+            <a href="index.html" hreflang="zh-Hans" lang="zh-CN" aria-current="page"
+              >中文</a
+            >
+            <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            100% 本地处理 &middot; 零上传 &middot; 隐私优先
+          </div>
+          <h1>
+            求职路上<br /><span class="shield">风险与进度都值得被守护</span>
+          </h1>
+          <p class="hero-sub">
+            JobGuard
+            是一款专为求职者打造的智能工具：内置规则在 iPhone
+            本地分析招聘 JD，秒出信任评分、风险报告、证据链与建议追问，帮你识别风险、管理进度、做出更明智的决策。
+          </p>
+          <div class="hero-actions">
+            <a
+              href="https://apps.apple.com/app/id6780220932"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-brands fa-apple" aria-hidden="true"></i> 从 App Store
+              下载
+            </a>
+            <a href="#features" class="btn btn-outline">
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i> 查看功能
+            </a>
+          </div>
+          <div class="hero-mockup">
+            <div class="phone-frame">
+              <img
+                src="https://cdn.ai-bar.cn/job-guard/snapshots/3-1.webp"
+                alt="JobGuard 应用界面：投递漏斗与面试分析报告"
+                width="642"
+                height="1389"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="stats">
+        <div class="stats-inner">
+          <div>
+            <div class="stat-icon">
+              <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            </div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">本地处理</div>
+          </div>
+          <div>
+            <div class="stat-icon">
+              <i class="fa-solid fa-language" aria-hidden="true"></i>
+            </div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">种语言：中文 / EN / 日本語</div>
+          </div>
+          <div>
+            <div class="stat-icon">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            </div>
+            <div class="stat-num">0</div>
+            <div class="stat-label">字节数据被上传</div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="section-inner">
+          <div class="section-tag">
+            <i class="fa-solid fa-star" aria-hidden="true"></i> 核心功能
+          </div>
+          <h2 class="section-title" id="features-title">
+            不止于分析，更是一整段求职旅程的助手
+          </h2>
+          <p class="section-desc">
+            从看到招聘信息到拿到 Offer，JobGuard
+            帮你在每一步识别风险、管理进度。
+          </p>
+          <div class="features-grid">
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(1, 167, 168, 0.1); color: var(--accent)"
+              >
+                <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+              </div>
+              <h3>JD 风险分析</h3>
+              <p>
+                粘贴或拍照识别招聘信息，内置规则覆盖邻近度、矛盾表述、高频词与结构异常等维度，生成带证据链的信任评分与风险报告。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(3, 132, 252, 0.1); color: #0384fc"
+              >
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+              </div>
+              <h3>投递看板</h3>
+              <p>
+                以看板管理每一次投递：已投递、已沟通、面试中、已
+                Offer。支持按状态、日期与关键词筛选，滑动即可编辑或删除，并带二次确认。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(230, 138, 46, 0.1); color: var(--amber)"
+              >
+                <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+              </div>
+              <h3>面试日历</h3>
+              <p>
+                内置月历记录每一场面试，可关联投递记录，也可独立创建。轮次、形式、地点与结果，一一记录。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(155, 77, 202, 0.1); color: #9b4dca"
+              >
+                <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+              </div>
+              <h3>高级报告 <span class="pro-tag">PRO</span></h3>
+              <p>
+                投递漏斗、面试转化趋势、渠道对比、薪资分布——用数据看见盲点，优化你的求职策略。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(45, 157, 74, 0.1); color: var(--green)"
+              >
+                <i class="fa-solid fa-widget" aria-hidden="true"></i>
+              </div>
+              <h3>主屏幕小组件</h3>
+              <p>
+                今日面试数量与下一场面试，一眼即知，无需打开 App。支持小号与中号尺寸。
+              </p>
+            </article>
+            <article class="feature-card">
+              <div
+                class="feature-icon"
+                style="background: rgba(224, 58, 58, 0.1); color: var(--red)"
+              >
+                <i class="fa-solid fa-file-shield" aria-hidden="true"></i>
+              </div>
+              <h3>风险报告与智能追问</h3>
+              <p>
+                每条命中规则都附带原文证据片段与位置，并自动生成建议向 HR
+                核实的追问清单。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="screenshots" id="screenshots" aria-labelledby="screenshots-title">
+        <div class="screenshots-inner">
+          <div class="section-tag">
+            <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> 应用截图
+          </div>
+          <h2 class="section-title" id="screenshots-title">
+            五个标签页，一个目标
+          </h2>
+          <p class="section-desc">
+            守护求职安全所需的一切——全部本地处理，全部留在你的设备上。
+          </p>
+          <div
+            class="screenshots-scroll"
+            role="region"
+            aria-label="JobGuard 应用截图"
+            tabindex="0"
+          >
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/1-1.webp"
+                  alt="面试日历，展示近期面试安排"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">不错过任何一场面试</div>
+                <div class="screenshot-sub">内置日历，面试安排一目了然</div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/2-1.webp"
+                  alt="按阶段分组的投递看板"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">看板式投递管理</div>
+                <div class="screenshot-sub">拖动卡片，从已投递到已 Offer</div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/2-2.webp"
+                  alt="投递时间线与面试轮次、风险洞察"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">完整时间线与风险洞察</div>
+                <div class="screenshot-sub">每一轮面试都有迹可循</div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/3-1.webp"
+                  alt="投递漏斗与薪资分布等数据报告"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">图表丰富，洞察清晰</div>
+                <div class="screenshot-sub">漏斗、趋势与薪资分布</div>
+              </figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <div class="screenshot-phone">
+                <img
+                  src="https://cdn.ai-bar.cn/job-guard/snapshots/4-1.webp"
+                  alt="招聘 JD 风险扫描与信任评分"
+                  width="642"
+                  height="1389"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <div class="screenshot-label">一键 JD 风险扫描</div>
+                <div class="screenshot-sub">内置规则毫秒级完成分析</div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="screenshots-hint">
+            <i class="fa-solid fa-arrows-left-right" aria-hidden="true"></i>
+            左右滑动查看全部截图
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how" aria-labelledby="how-title">
+        <div class="section-inner">
+          <div class="section-tag">
+            <i
+              class="fa-solid fa-arrow-right-arrow-left"
+              aria-hidden="true"
+            ></i>
+            使用流程
+          </div>
+          <h2 class="section-title" id="how-title">
+            从一份 JD 到一次明智决定，只需四步
+          </h2>
+          <p class="section-desc">
+            全部在设备本地完成。无需账号，也无需联网。
+          </p>
+          <ol class="flow">
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-paste" aria-hidden="true"></i>
+              </div>
+              <h3>粘贴 / 拍照</h3>
+              <p>粘贴招聘文本或拍照，OCR 自动提取文字</p>
+            </li>
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+              </div>
+              <h3>分析</h3>
+              <p>内置规则在设备本地毫秒级完成评估，生成信任评分</p>
+            </li>
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              </div>
+              <h3>查看</h3>
+              <p>查看命中规则、矛盾点、原文证据与建议追问</p>
+            </li>
+            <li class="flow-step">
+              <div class="flow-icon">
+                <i class="fa-solid fa-folder-plus" aria-hidden="true"></i>
+              </div>
+              <h3>追踪</h3>
+              <p>一键加入投递看板，管理完整的面试流程</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="risk-title">
+        <div class="section-inner">
+          <div class="section-tag">
+            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+            风险等级
+          </div>
+          <h2 class="section-title" id="risk-title">三档风险，一眼看清</h2>
+          <p class="section-desc">
+            信任评分 0–100，每条命中规则附带四级严重程度。
+          </p>
+          <div class="risk-showcase">
+            <div class="risk-card">
+              <div class="risk-badge low">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i> 低风险
+                &middot; 71-100
+              </div>
+              <p>
+                未发现明显的危险信号，JD 相对透明，保持常规谨慎即可。
+              </p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-badge medium">
+                <i
+                  class="fa-solid fa-circle-exclamation"
+                  aria-hidden="true"
+                ></i>
+                中风险 &middot; 41-70
+              </div>
+              <p>
+                发现可疑信号。请结合建议追问，向雇主核实关键信息后再做决定。
+              </p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-badge high">
+                <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                高风险 &middot; 0-40
+              </div>
+              <p>
+                检测到严重或多个欺诈特征。强烈建议在任何行动前进行充分核实。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="privacy" aria-labelledby="privacy-title">
+        <div class="section-inner">
+          <div class="privacy-banner">
+            <div class="shield-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h2 id="privacy-title">你的求职数据，永远不会离开手机</h2>
+            <p>
+              所有分析均在设备本地完成。无需注册账号，不上传服务器，不接入第三方追踪。删除
+              App，数据即彻底消失。
+            </p>
+            <div class="privacy-badges">
+              <div class="privacy-badge">
+                <i class="fa-solid fa-wifi-slash" aria-hidden="true"></i> 离线可用
+              </div>
+              <div class="privacy-badge">
+                <i class="fa-solid fa-user-lock" aria-hidden="true"></i> 无需注册
+              </div>
+              <div class="privacy-badge">
+                <i class="fa-solid fa-eye-slash" aria-hidden="true"></i> 零追踪
+              </div>
+              <div class="privacy-badge">
+                <i class="fa-solid fa-database" aria-hidden="true"></i> 本地 Core
+                Data
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">开始更安全的求职</h2>
+        <p>免费下载——每日 1 次分析。Pro 为一次性买断，永久有效。</p>
+        <div class="cta-actions">
+          <a
+            href="https://apps.apple.com/app/id6780220932"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-apple" aria-hidden="true"></i> 从 App Store
+            下载
+          </a>
+          <a href="about.html" class="btn btn-outline">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> 关于
+            JobGuard
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <nav class="footer-links" aria-label="页脚导航">
+          <a href="about.html">关于</a>
+          <a href="privacy.html">隐私</a>
+          <a href="terms.html">条款</a>
+          <a
+            class="email-link"
+            href="mailto:ttghost@126.com?subject=JobGuard%20-%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88"
+            aria-label="发送邮件联系 JobGuard"
+            title="发送邮件联系 JobGuard"
+          >
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span class="visually-hidden">发送邮件联系 JobGuard</span>
+          </a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 JobGuard. 保留所有权利。</p>
+      </div>
+    </footer>
+  </body>
+</html>
